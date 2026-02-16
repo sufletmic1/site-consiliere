@@ -19,12 +19,6 @@ body{
 font-family:'Poppins',sans-serif;
 background:#f3f4f6;
 color:#1f2937;
-opacity:0;
-transition:opacity 0.6s ease;
-}
-
-body.loaded{
-opacity:1;
 }
 
 /* HEADER */
@@ -47,36 +41,27 @@ animation:float 3s ease-in-out infinite;
 50%{transform:translateY(-6px);}
 }
 
-/* MENIU */
+/* MENIU ORIZONTAL */
 nav{
-display:flex;
-flex-direction:column;
-align-items:center;
-margin-top:25px;
+margin-top:35px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-padding:12px 0;
-width:100%;
-text-align:center;
-font-size:14px;
-letter-spacing:1px;
+margin:0 15px;
+font-weight:500;
 position:relative;
-overflow:hidden;
 }
 
 nav a::after{
-content:"";
-position:absolute;
-bottom:0;
-left:50%;
+content:'';
+display:block;
 height:2px;
 width:0%;
 background:white;
-transform:translateX(-50%);
-transition:width 0.4s ease;
+transition:0.3s;
+margin:auto;
 }
 
 nav a:hover::after{
@@ -95,16 +80,6 @@ background:white;
 padding:40px;
 border-radius:20px;
 box-shadow:0 15px 35px rgba(0,0,0,0.08);
-opacity:0;
-transform:translateY(30px);
-animation:fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp{
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 h2{
@@ -181,21 +156,12 @@ font-weight:500;
 transition:0.3s ease;
 }
 
-.telegram{
-background:#0088cc;
-}
-
-.tiktok{
-background:#000000;
-}
-
+.telegram{ background:#0088cc; }
+.tiktok{ background:#000000; }
 .instagram{
 background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
 }
-
-.facebook{
-background:#1877f2;
-}
+.facebook{ background:#1877f2; }
 
 .social a:hover{
 transform:translateY(-4px) scale(1.05);
@@ -209,6 +175,14 @@ color:#9ca3af;
 text-align:center;
 padding:25px;
 margin-top:80px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+nav a{
+display:block;
+margin:10px 0;
+}
 }
 </style>
 </head>
@@ -279,20 +253,6 @@ Mesajul a fost trimis cu succes 🤍
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-document.body.classList.add("loaded");
-
-document.querySelectorAll("a").forEach(link=>{
-link.addEventListener("click",function(e){
-if(this.href.includes(".html")){
-e.preventDefault();
-document.body.style.opacity="0";
-setTimeout(()=>{window.location=this.href;},400);
-}
-});
-});
-});
-
 (function(){
 emailjs.init("_IVe9Vmte22ka5wMm");
 })();
