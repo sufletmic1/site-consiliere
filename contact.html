@@ -22,6 +22,7 @@ body.fade-in{
 opacity:1;
 }
 
+/* HEADER */
 header{
 background:linear-gradient(135deg,#1b4332,#2d6a4f);
 color:white;
@@ -29,20 +30,45 @@ padding:80px 20px;
 text-align:center;
 }
 
-nav{margin-top:30px;}
+/* MENIU VERTICAL IDENTIC */
+nav{
+margin-top:30px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
 
 nav a{
 color:white;
 text-decoration:none;
-margin:0 15px;
 font-weight:500;
+position:relative;
+padding-bottom:5px;
+}
+
+/* Linie animată */
+nav a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background:white;
+left:0;
+bottom:0;
 transition:0.3s;
 }
 
-nav a:hover{
-opacity:0.7;
+nav a:hover::after{
+width:100%;
 }
 
+/* Evidențiere pagină activă */
+nav a.active::after{
+width:100%;
+}
+
+/* SECTIUNE */
 section{
 max-width:700px;
 margin:80px auto;
@@ -71,6 +97,7 @@ margin-bottom:20px;
 color:#2d6a4f;
 }
 
+/* FORMULAR */
 input, textarea{
 width:100%;
 padding:15px;
@@ -114,6 +141,7 @@ text-align:center;
 font-weight:500;
 }
 
+/* SOCIAL */
 .social{
 margin-top:40px;
 text-align:center;
@@ -142,6 +170,7 @@ background:#1b4332;
 transform:translateY(-3px);
 }
 
+/* FOOTER */
 footer{
 background:#111827;
 color:#9ca3af;
@@ -161,7 +190,7 @@ font-size:14px;
 <a href="index.html">Comunitate</a>
 <a href="poveste.html">Despre noi</a>
 <a href="marturii.html">Mărturii</a>
-<a href="contact.html">Contact</a>
+<a href="contact.html" class="active">Contact</a>
 </nav>
 </header>
 
@@ -226,5 +255,6 @@ console.log(error);
 
 </body>
 </html>
+
 
 
