@@ -2,39 +2,110 @@
 <html lang="ro">
 <head>
 <meta charset="UTF-8">
-<title>Comunitatea - Suflet Mic</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suflet Mic | Comunitatea</title>
+
 <style>
-body { font-family: Arial; margin:0; background:#f4f6f9; color:#333; }
-header { background:#a8d5ba; padding:50px 20px; text-align:center; }
-nav a {
-  margin:10px;
-  padding:10px 20px;
-  text-decoration:none;
-  background:#2d6a4f;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background:#f4f6f9;
+  color:#333;
+  line-height:1.6;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#95d5b2,#52b788);
+  padding:60px 20px;
+  text-align:center;
   color:white;
-  border-radius:20px;
 }
-section {
-  max-width:900px;
-  margin:40px auto;
+
+.logo{
+  font-size:28px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+.logo span{
+  font-weight:300;
+}
+
+nav{
+  margin-top:25px;
+}
+
+nav a{
+  text-decoration:none;
+  margin:8px;
+  padding:10px 20px;
   background:white;
-  padding:40px;
-  border-radius:15px;
+  color:#2d6a4f;
+  border-radius:30px;
+  font-weight:bold;
+  transition:0.3s;
 }
-footer {
+
+nav a:hover{
+  background:#1b4332;
+  color:white;
+}
+
+/* SECTION */
+section{
+  max-width:900px;
+  margin:60px auto;
+  padding:40px;
+  background:white;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+h2{
+  margin-bottom:20px;
+  color:#2d6a4f;
+}
+
+/* FOOTER */
+footer{
   background:#1b4332;
   color:white;
   text-align:center;
-  padding:20px;
+  padding:25px;
+  margin-top:60px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav a{
+    display:block;
+    margin:10px auto;
+    width:80%;
+  }
+
+  section{
+    margin:30px 15px;
+    padding:25px;
+  }
+
+  header{
+    padding:40px 15px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Suflet Mic care te ascultă</h1>
-<p>Îndrumare biblică și sprijin emoțional</p>
+<div class="logo">🌿 Suflet Mic <span>care te ascultă</span></div>
+<p>Îndrumare biblică și sprijin emoțional, fără presiune</p>
 
 <nav>
 <a href="index.html">Comunitatea</a>
@@ -47,17 +118,18 @@ footer {
 <section>
 <h2>Cine suntem</h2>
 <p>
-Suntem o comunitate dedicată sprijinului emoțional pentru persoane care au trecut prin
-suicid în familie, violență, bullying, respingere sau au avut intenția de a se sinucide.
+Suntem o comunitate online dedicată sprijinului emoțional pentru persoane care au trecut prin traume:
+suicid în familie, violență, bullying, respingere sau gânduri de sinucidere.
 </p>
+
 <p>
-Totul este voluntar. Fără presiune religioasă. Fără ritualuri impuse.
-Un spațiu sigur unde fiecare este ascultat.
+Totul este voluntar. Fără ritualuri impuse. Fără presiune religioasă.
+Un loc sigur unde fiecare este ascultat și respectat.
 </p>
 </section>
 
 <footer>
-© 2026 Suflet Mic
+© 2026 Suflet Mic | Comunitate de sprijin
 </footer>
 
 </body>
