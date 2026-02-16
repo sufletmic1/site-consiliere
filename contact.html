@@ -6,6 +6,7 @@
 <title>Suflet Mic | Contact</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
@@ -111,6 +112,7 @@ margin-bottom:20px;
 color:#2d6a4f;
 }
 
+/* FORM */
 input, textarea{
 width:100%;
 padding:15px;
@@ -153,6 +155,51 @@ border-radius:10px;
 text-align:center;
 }
 
+/* SOCIAL MEDIA */
+.social{
+margin-top:40px;
+text-align:center;
+}
+
+.social h3{
+margin-bottom:20px;
+color:#2d6a4f;
+}
+
+.social a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+margin:10px;
+padding:12px 22px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+transition:0.3s ease;
+}
+
+/* Culori oficiale */
+.telegram{
+background:#0088cc;
+}
+
+.tiktok{
+background:#000000;
+}
+
+.instagram{
+background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+
+.social a:hover{
+transform:translateY(-4px) scale(1.05);
+opacity:0.9;
+}
+
+/* FOOTER */
 footer{
 background:#111827;
 color:#9ca3af;
@@ -196,6 +243,23 @@ margin-top:80px;
 
 <div class="success-message" id="success-msg">
 Mesajul a fost trimis cu succes 🤍
+</div>
+
+<div class="social">
+<h3>Ne găsești și pe:</h3>
+
+<a href="https://t.me/sufletmiccareteasculta" target="_blank" class="telegram">
+<i class="fab fa-telegram-plane"></i> Telegram
+</a>
+
+<a href="http://www.tiktok.com/@suflet.mic14" target="_blank" class="tiktok">
+<i class="fab fa-tiktok"></i> TikTok
+</a>
+
+<a href="#" target="_blank" class="instagram">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+
 </div>
 
 </div>
@@ -243,6 +307,5 @@ document.getElementById("contact-form").reset();
 
 </body>
 </html>
-
 
 
