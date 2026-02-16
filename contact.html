@@ -4,25 +4,142 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Suflet Mic | Contact</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:#f3f4f6;color:#1f2937;}
-header{background:linear-gradient(135deg,#1b4332,#2d6a4f);color:white;padding:80px 20px;text-align:center;}
-.logo{display:flex;justify-content:center;align-items:center;gap:12px;font-size:28px;font-weight:600;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f3f4f6;
+color:#1f2937;
+}
+
+header{
+background:linear-gradient(135deg,#1b4332,#2d6a4f);
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+.logo{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+font-size:28px;
+font-weight:600;
+}
+
 .logo svg{width:42px;height:42px;}
+
 nav{margin-top:35px;}
-nav a{color:white;text-decoration:none;margin:0 15px;font-weight:500;position:relative;}
-nav a::after{content:'';display:block;height:2px;width:0%;background:white;transition:0.3s;margin:auto;}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:500;
+position:relative;
+}
+
+nav a::after{
+content:'';
+display:block;
+height:2px;
+width:0%;
+background:white;
+transition:0.3s;
+margin:auto;
+}
+
 nav a:hover::after{width:100%;}
-section{max-width:800px;margin:80px auto;padding:0 20px;animation:fadeIn 1s ease;}
-.card{background:white;padding:50px;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,0.08);}
-input,textarea{width:100%;padding:15px;margin-bottom:15px;border-radius:10px;border:1px solid #ccc;}
-button{padding:15px 30px;border:none;background:#2d6a4f;color:white;border-radius:30px;font-weight:600;cursor:pointer;}
+
+section{
+max-width:900px;
+margin:80px auto;
+padding:0 20px;
+animation:fadeIn 1s ease;
+}
+
+.card{
+background:white;
+padding:50px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+h2{
+font-size:28px;
+margin-bottom:25px;
+color:#2d6a4f;
+}
+
+input, textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-family:'Poppins',sans-serif;
+}
+
+button{
+padding:15px 30px;
+border:none;
+background:#2d6a4f;
+color:white;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
 button:hover{background:#1b4332;}
-footer{background:#111827;color:#9ca3af;text-align:center;padding:30px;margin-top:100px;font-size:14px;}
-@keyframes fadeIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-@media(max-width:768px){nav a{display:block;margin:12px 0;}.card{padding:30px;}}
+
+.social{
+margin-top:40px;
+text-align:center;
+}
+
+.social a{
+display:inline-block;
+margin:10px;
+padding:12px 25px;
+background:#52b788;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:0.3s;
+}
+
+.social a:hover{background:#1b4332;}
+
+#status{
+margin-top:15px;
+font-weight:500;
+}
+
+footer{
+background:#111827;
+color:#9ca3af;
+text-align:center;
+padding:30px;
+margin-top:100px;
+font-size:14px;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@media(max-width:768px){
+nav a{display:block;margin:12px 0;}
+.card{padding:30px;}
+.social a{display:block;margin:10px auto;width:80%;}
+}
 </style>
 </head>
 
@@ -46,14 +163,25 @@ Suflet Mic
 
 <section>
 <div class="card">
+
 <h2>Trimite-ne un mesaj</h2>
 
-<form>
-<input type="text" placeholder="Numele tău" required>
-<input type="email" placeholder="Emailul tău" required>
-<textarea placeholder="Mesajul tău" rows="5" required></textarea>
+<form id="contact-form">
+<input type="text" name="name" placeholder="Numele tău" required>
+<input type="email" name="email" placeholder="Emailul tău" required>
+<textarea name="message" placeholder="Mesajul tău" rows="5" required></textarea>
 <button type="submit">Trimite mesaj</button>
 </form>
+
+<p id="status"></p>
+
+<div class="social">
+<h2>Ne găsești și aici</h2>
+<a href="https://t.me/sufletmiccareteasculta" target="_blank">Telegram</a>
+<a href="http://www.tiktok.com/@suflet.mic14" target="_blank">TikTok</a>
+<a href="https://www.instagram.com/un_suflet_mic_care_te_asculta" target="_blank">Instagram</a>
+<a href="https://www.facebook.com/share/1GVwoEyhzU/?mibextid=wwXIfr" target="_blank">Facebook</a>
+</div>
 
 </div>
 </section>
@@ -62,7 +190,25 @@ Suflet Mic
 © 2026 Suflet Mic
 </footer>
 
+<!-- EMAILJS SCRIPT -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+(function(){
+emailjs.init("PUBLIC_KEY_UL_TAU");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+e.preventDefault();
+
+emailjs.sendForm("SERVICE_ID","TEMPLATE_ID", this)
+.then(function(){
+document.getElementById("status").innerHTML="Mesaj trimis cu succes 🤍";
+document.getElementById("contact-form").reset();
+}, function(error){
+document.getElementById("status").innerHTML="Eroare la trimitere. Încearcă din nou.";
+});
+});
+</script>
+
 </body>
 </html>
-
-
