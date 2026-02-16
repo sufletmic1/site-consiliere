@@ -72,6 +72,7 @@ background:white;
 padding:50px;
 border-radius:25px;
 box-shadow:0 20px 50px rgba(0,0,0,0.08);
+margin-bottom:30px;
 }
 
 h2{
@@ -79,18 +80,14 @@ color:#2d6a4f;
 margin-bottom:20px;
 }
 
-p{
-line-height:1.8;
-margin-bottom:15px;
+.testimonial-name{
+font-weight:500;
+color:#2d6a4f;
+margin-top:20px;
 }
 
-.disclaimer{
-margin-bottom:40px;
-padding:20px;
-background:#f8fafc;
-border-left:5px solid #2d6a4f;
-border-radius:12px;
-font-size:14px;
+p{
+line-height:1.8;
 }
 
 footer{
@@ -119,32 +116,33 @@ font-size:14px;
 <section>
 
 <div class="card">
+<h2>Ce spun membrii comunității</h2>
 
-<h2>Spune-ți părerea</h2>
+<p>
+„Când am descoperit Suflet Mic, eram într-o perioadă foarte dificilă. 
+Am găsit aici oameni care m-au ascultat fără să mă judece.”
+</p>
+<div class="testimonial-name">— Ana</div>
 
-<div class="disclaimer">
-Te rugăm să păstrezi un limbaj respectuos. Comentariile jignitoare sau nepotrivite vor fi șterse pentru a menține un spațiu sigur pentru toți.
 </div>
 
-<!-- COMENTARII DISQUS -->
+<div class="card">
 
-<div id="disqus_thread"></div>
+<p>
+„Nu credeam că voi avea curaj să vorbesc despre ce simt. 
+Comunitatea aceasta mi-a oferit sprijin și înțelegere.”
+</p>
+<div class="testimonial-name">— Mihai</div>
 
-<script>
-var disqus_config = function () {
-this.page.url = window.location.href;
-this.page.identifier = "marturii_suflet_mic";
-};
+</div>
 
-(function() {
-var d = document, s = d.createElement('script');
-s.src = 'https://SHORTNAMEUL_TAU.disqus.com/embed.js';  // <-- AICI pui shortname-ul tău
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
+<div class="card">
 
-<noscript>Activează JavaScript pentru a vedea comentariile.</noscript>
+<p>
+„Fiecare mesaj primit aici m-a ajutat să merg mai departe. 
+Este un spațiu sigur unde pot fi eu însămi.”
+</p>
+<div class="testimonial-name">— Andreea</div>
 
 </div>
 
@@ -172,4 +170,3 @@ setTimeout(()=>{window.location=this.href;},600);
 
 </body>
 </html>
-
