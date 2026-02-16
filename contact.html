@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suflet Mic | Comunitate</title>
+<title>Suflet Mic | Contact</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
@@ -16,7 +17,7 @@ box-sizing:border-box;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#f4f6f9;
+background:#f3f4f6;
 color:#1f2937;
 opacity:0;
 transition:opacity 0.6s ease;
@@ -30,12 +31,13 @@ opacity:1;
 header{
 background:linear-gradient(135deg,#1b4332,#2d6a4f);
 color:white;
-padding:70px 20px;
+padding:60px 20px;
 text-align:center;
 }
 
+/* LOGO */
 .logo{
-width:75px;
+width:70px;
 margin:0 auto 15px;
 animation:float 3s ease-in-out infinite;
 }
@@ -45,12 +47,7 @@ animation:float 3s ease-in-out infinite;
 50%{transform:translateY(-6px);}
 }
 
-header h1{
-font-weight:500;
-letter-spacing:1px;
-}
-
-/* MENIU ONG */
+/* MENIU */
 nav{
 display:flex;
 flex-direction:column;
@@ -88,19 +85,19 @@ width:100%;
 
 /* CONTENT */
 section{
-max-width:850px;
+max-width:700px;
 margin:80px auto;
 padding:0 20px;
 }
 
 .card{
 background:white;
-padding:50px;
-border-radius:25px;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-animation:fadeUp 1s ease forwards;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
 opacity:0;
 transform:translateY(30px);
+animation:fadeUp 1s ease forwards;
 }
 
 @keyframes fadeUp{
@@ -111,38 +108,98 @@ transform:translateY(0);
 }
 
 h2{
-color:#2d6a4f;
 margin-bottom:20px;
+color:#2d6a4f;
 }
 
-p{
-line-height:1.8;
+/* FORM */
+input, textarea{
+width:100%;
+padding:15px;
 margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-family:'Poppins',sans-serif;
+transition:0.3s;
 }
 
-/* MISSION */
-.mission{
-margin-top:50px;
-padding:40px;
-background:#f8fafc;
-border-radius:20px;
-border-left:6px solid #2d6a4f;
+input:focus, textarea:focus{
+border-color:#2d6a4f;
+outline:none;
 }
 
-.mission ul{
-margin:20px 0;
-padding-left:20px;
-line-height:1.9;
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:30px;
+background:#2d6a4f;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
 }
 
-/* ALERT RESPONSABIL */
-.alert{
-margin-top:30px;
-padding:20px;
-background:#ffe5e5;
-border-radius:15px;
-color:#7f1d1d;
+button:hover{
+background:#1b4332;
+transform:scale(1.03);
+}
+
+.success-message{
+display:none;
+margin-top:20px;
+padding:15px;
+background:#d8f3dc;
+color:#1b4332;
+border-radius:10px;
+text-align:center;
+}
+
+/* SOCIAL */
+.social{
+margin-top:40px;
+text-align:center;
+}
+
+.social h3{
+margin-bottom:20px;
+color:#2d6a4f;
+}
+
+.social a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+margin:10px;
+padding:12px 22px;
+border-radius:30px;
+color:white;
+text-decoration:none;
 font-size:14px;
+font-weight:500;
+transition:0.3s ease;
+}
+
+.telegram{
+background:#0088cc;
+}
+
+.tiktok{
+background:#000000;
+}
+
+.instagram{
+background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+
+.facebook{
+background:#1877f2;
+}
+
+.social a:hover{
+transform:translateY(-4px) scale(1.05);
+opacity:0.9;
 }
 
 /* FOOTER */
@@ -150,16 +207,8 @@ footer{
 background:#111827;
 color:#9ca3af;
 text-align:center;
-padding:30px;
+padding:25px;
 margin-top:80px;
-font-size:14px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-.card{
-padding:30px;
-}
 }
 </style>
 </head>
@@ -184,53 +233,50 @@ padding:30px;
 </header>
 
 <section>
-
 <div class="card">
 
-<h2>Cine suntem ca și comunitate</h2>
+<h2>Trimite-ne un mesaj</h2>
 
-<p>
-Suflet Mic este o comunitate construită pe ascultare, empatie și credință. 
-Suntem un spațiu sigur pentru cei care trec prin durere emoțională, traumă sau singurătate.
-</p>
+<form id="contact-form">
+<input type="text" name="name" placeholder="Numele tău" required>
+<input type="email" name="email" placeholder="Emailul tău" required>
+<textarea name="message" rows="5" placeholder="Scrie mesajul tău..." required></textarea>
+<button type="submit">Trimite mesajul</button>
+</form>
 
-<div class="mission">
+<div class="success-message" id="success-msg">
+Mesajul a fost trimis cu succes 🤍
+</div>
 
-<h2>Misiunea noastră</h2>
+<div class="social">
+<h3>Ne găsești și pe:</h3>
 
-<p>
-Ne dorim să construim o asociație de consiliere biblică dedicată persoanelor care au trecut prin traume profunde și răni sufletești.
-</p>
+<a href="https://t.me/sufletmiccareteasculta" target="_blank" class="telegram">
+<i class="fab fa-telegram-plane"></i> Telegram
+</a>
 
-<p>Suntem alături de cei care au experimentat:</p>
+<a href="http://www.tiktok.com/@suflet.mic14" target="_blank" class="tiktok">
+<i class="fab fa-tiktok"></i> TikTok
+</a>
 
-<ul>
-<li>• Pierderea unei persoane prin sinucidere</li>
-<li>• Violență în familie</li>
-<li>• Bullying și umilință</li>
-<li>• Respingere, abandon sau marginalizare</li>
-<li>• Perioade în care nu mai găsesc dorința de a merge mai departe</li>
-</ul>
+<a href="https://www.instagram.com/un_suflet_mic_care_te_asculta/" target="_blank" class="instagram">
+<i class="fab fa-instagram"></i> Instagram
+</a>
 
-<p>
-Credem că fiecare viață are valoare.
-Credem că vindecarea începe prin ascultare, credință și comunitate.
-Nu judecăm. Nu condamnăm. Suntem aici să ascultăm.
-</p>
+<a href="https://www.facebook.com/" target="_blank" class="facebook">
+<i class="fab fa-facebook-f"></i> Facebook
+</a>
 
 </div>
 
-<div class="alert">
-Dacă te afli într-o situație de urgență sau simți că ești în pericol imediat, te rugăm să apelezi 112 sau să contactezi o linie de sprijin specializată.
 </div>
-
-</div>
-
 </section>
 
 <footer>
-© 2026 Suflet Mic | Comunitate de sprijin și consiliere
+© 2026 Suflet Mic
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -244,6 +290,23 @@ document.body.style.opacity="0";
 setTimeout(()=>{window.location=this.href;},400);
 }
 });
+});
+});
+
+(function(){
+emailjs.init("_IVe9Vmte22ka5wMm");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+e.preventDefault();
+
+emailjs.sendForm(
+"service_s6qhej9",
+"template_b9xtxlc",
+this
+).then(function() {
+document.getElementById("success-msg").style.display="block";
+document.getElementById("contact-form").reset();
 });
 });
 </script>
