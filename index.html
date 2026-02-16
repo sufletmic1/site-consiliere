@@ -8,7 +8,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Poppins',sans-serif;
@@ -53,29 +57,30 @@ margin-top:25px;
 nav a{
 color:white;
 text-decoration:none;
-padding:10px 0;
+padding:12px 0;
 width:100%;
 text-align:center;
 font-size:14px;
 letter-spacing:1px;
 position:relative;
+overflow:hidden;
 }
 
-/* Linie din mijloc */
+/* LINIE FULL WIDTH DIN MIJLOC */
 nav a::after{
 content:"";
 position:absolute;
-left:50%;
 bottom:0;
+left:50%;
 height:2px;
 width:0%;
 background:white;
 transform:translateX(-50%);
-transition:0.4s ease;
+transition:width 0.4s ease;
 }
 
 nav a:hover::after{
-width:60%;
+width:100%;
 }
 
 /* CONTENT */
@@ -90,13 +95,16 @@ background:white;
 padding:50px;
 border-radius:20px;
 box-shadow:0 15px 35px rgba(0,0,0,0.08);
-animation:fadeUp 1s ease forwards;
 opacity:0;
 transform:translateY(30px);
+animation:fadeUp 1s ease forwards;
 }
 
 @keyframes fadeUp{
-to{opacity:1;transform:translateY(0);}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 footer{
