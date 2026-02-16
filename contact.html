@@ -14,6 +14,12 @@ body{
 font-family:'Poppins',sans-serif;
 background:#f3f4f6;
 color:#1f2937;
+opacity:0;
+transition:opacity 0.8s ease;
+}
+
+body.fade-in{
+opacity:1;
 }
 
 header{
@@ -30,6 +36,11 @@ color:white;
 text-decoration:none;
 margin:0 15px;
 font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:0.7;
 }
 
 section{
@@ -43,6 +54,16 @@ background:white;
 padding:40px;
 border-radius:20px;
 box-shadow:0 15px 35px rgba(0,0,0,0.08);
+transform:translateY(40px);
+opacity:0;
+animation:slideUp 1s ease forwards;
+}
+
+@keyframes slideUp{
+to{
+transform:translateY(0);
+opacity:1;
+}
 }
 
 h2{
@@ -57,6 +78,12 @@ margin-bottom:15px;
 border-radius:10px;
 border:1px solid #ccc;
 font-family:'Poppins',sans-serif;
+transition:0.3s;
+}
+
+input:focus, textarea:focus{
+border-color:#2d6a4f;
+outline:none;
 }
 
 button{
@@ -73,6 +100,7 @@ width:100%;
 
 button:hover{
 background:#1b4332;
+transform:scale(1.03);
 }
 
 .success-message{
@@ -89,6 +117,13 @@ font-weight:500;
 .social{
 margin-top:40px;
 text-align:center;
+opacity:0;
+animation:fadeIn 1.5s ease forwards;
+animation-delay:0.5s;
+}
+
+@keyframes fadeIn{
+to{opacity:1;}
 }
 
 .social a{
@@ -104,6 +139,7 @@ transition:0.3s;
 
 .social a:hover{
 background:#1b4332;
+transform:translateY(-3px);
 }
 
 footer{
@@ -160,10 +196,13 @@ Mesajul a fost trimis cu succes 🤍 Îți vom răspunde cât mai curând.
 © 2026 Suflet Mic
 </footer>
 
-<!-- EMAILJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+document.body.classList.add("fade-in");
+});
+
 (function(){
 emailjs.init("_IVe9Vmte22ka5wMm");
 })();
@@ -179,7 +218,7 @@ this
 document.getElementById("success-msg").style.display = "block";
 document.getElementById("contact-form").reset();
 }, function(error) {
-alert("Eroare la trimitere. Verifică consola.");
+alert("Eroare la trimitere.");
 console.log(error);
 });
 });
@@ -187,4 +226,5 @@ console.log(error);
 
 </body>
 </html>
+
 
