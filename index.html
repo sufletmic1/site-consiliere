@@ -5,67 +5,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Suflet Mic | Comunitate</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#f3f4f6;
 color:#1f2937;
 opacity:0;
 transition:opacity 0.6s ease;
-overflow-x:hidden;
 }
-body.loaded{opacity:1;}
 
+body.loaded{
+opacity:1;
+}
+
+/* HEADER */
 header{
 background:linear-gradient(135deg,#1b4332,#2d6a4f);
 color:white;
 padding:60px 20px;
 text-align:center;
-position:relative;
 }
 
+/* LOGO */
 .logo{
-width:80px;
+width:70px;
 margin:0 auto 15px;
 animation:float 3s ease-in-out infinite;
 }
+
 @keyframes float{
 0%,100%{transform:translateY(0);}
-50%{transform:translateY(-8px);}
+50%{transform:translateY(-6px);}
 }
 
+/* MENIU */
 nav{
 display:flex;
 flex-direction:column;
 align-items:center;
 margin-top:25px;
 }
+
 nav a{
 color:white;
 text-decoration:none;
-padding:12px 0;
+padding:10px 0;
 width:100%;
 text-align:center;
+font-size:14px;
+letter-spacing:1px;
 position:relative;
 }
+
+/* Linie din mijloc */
 nav a::after{
 content:"";
 position:absolute;
-left:0;
+left:50%;
 bottom:0;
-width:0%;
 height:2px;
+width:0%;
 background:white;
-transition:0.4s;
-}
-nav a:hover::after,
-nav a.active::after{
-width:100%;
+transform:translateX(-50%);
+transition:0.4s ease;
 }
 
+nav a:hover::after{
+width:60%;
+}
+
+/* CONTENT */
 section{
 max-width:900px;
 margin:80px auto;
@@ -77,12 +90,13 @@ background:white;
 padding:50px;
 border-radius:20px;
 box-shadow:0 15px 35px rgba(0,0,0,0.08);
-transform:translateY(30px);
-opacity:0;
 animation:fadeUp 1s ease forwards;
+opacity:0;
+transform:translateY(30px);
 }
+
 @keyframes fadeUp{
-to{transform:translateY(0);opacity:1;}
+to{opacity:1;transform:translateY(0);}
 }
 
 footer{
@@ -92,32 +106,13 @@ text-align:center;
 padding:25px;
 margin-top:80px;
 }
-
-.heart{
-position:fixed;
-top:40%;
-font-size:40px;
-opacity:0;
-animation:heartAnim 2.5s ease forwards;
-z-index:999;
-}
-.heart.left{left:20px;}
-.heart.right{right:20px;}
-
-@keyframes heartAnim{
-0%{opacity:0;transform:scale(0.5);}
-30%{opacity:1;transform:scale(1.2);}
-70%{opacity:1;}
-100%{opacity:0;transform:scale(0.5);}
-}
 </style>
 </head>
+
 <body>
 
-<div class="heart left">❤️</div>
-<div class="heart right">❤️</div>
-
 <header>
+
 <svg class="logo" viewBox="0 0 100 100" fill="white">
 <path d="M50 90s-35-20-35-45a20 20 0 0 1 35-10 20 20 0 0 1 35 10c0 25-35 45-35 45z"/>
 </svg>
@@ -125,26 +120,30 @@ z-index:999;
 <h1>Suflet Mic</h1>
 
 <nav>
-<a href="index.html" class="active">Comunitate</a>
+<a href="index.html">Comunitate</a>
 <a href="poveste.html">Despre noi</a>
 <a href="marturii.html">Mărturii</a>
 <a href="contact.html">Contact</a>
 </nav>
+
 </header>
 
 <section>
 <div class="card">
 <h2>Comunitatea noastră</h2>
-<p>Suntem un spațiu sigur pentru sufletele care au nevoie să fie ascultate. 
+<p>Suntem un spațiu sigur pentru sufletele care au nevoie să fie ascultate.
 Aici construim sprijin, empatie și conexiune reală.</p>
 </div>
 </section>
 
-<footer>© 2026 Suflet Mic</footer>
+<footer>
+© 2026 Suflet Mic
+</footer>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 document.body.classList.add("loaded");
+
 document.querySelectorAll("a").forEach(link=>{
 link.addEventListener("click",function(e){
 if(this.href.includes(".html")){
@@ -159,7 +158,6 @@ setTimeout(()=>{window.location=this.href;},400);
 
 </body>
 </html>
-
 
 
 
