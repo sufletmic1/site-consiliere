@@ -15,10 +15,11 @@ font-family:'Poppins',sans-serif;
 background:#f3f4f6;
 color:#1f2937;
 opacity:0;
-transition:opacity 0.8s ease;
+transition:opacity 0.6s ease;
+overflow-x:hidden;
 }
 
-body.fade-in{
+body.loaded{
 opacity:1;
 }
 
@@ -26,47 +27,60 @@ opacity:1;
 header{
 background:linear-gradient(135deg,#1b4332,#2d6a4f);
 color:white;
-padding:80px 20px;
+padding:60px 20px;
 text-align:center;
+position:relative;
 }
 
-/* MENIU VERTICAL */
+/* LOGO SVG ANIMAT */
+.logo{
+width:80px;
+margin:0 auto 15px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+}
+
+/* MENIU ONG MODERN */
 nav{
-margin-top:30px;
 display:flex;
 flex-direction:column;
 align-items:center;
-width:100%;
+margin-top:25px;
+position:relative;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:500;
+padding:12px 0;
 width:100%;
 text-align:center;
-padding:12px 0;
+font-weight:500;
 position:relative;
 }
 
-/* Linie albă pe toată lățimea */
 nav a::after{
 content:"";
 position:absolute;
-left:0;
+left:50%;
 bottom:0;
-width:0%;
 height:2px;
+width:0%;
 background:white;
-transition:0.3s ease;
+transition:0.4s ease;
+transform:translateX(-50%);
 }
 
 nav a:hover::after{
-width:100%;
+width:80%;
 }
 
 nav a.active::after{
-width:100%;
+width:80%;
 }
 
 /* SECTIUNE */
@@ -81,16 +95,13 @@ background:white;
 padding:40px;
 border-radius:20px;
 box-shadow:0 15px 35px rgba(0,0,0,0.08);
-transform:translateY(40px);
+transform:translateY(30px);
 opacity:0;
-animation:slideUp 1s ease forwards;
+animation:fadeUp 1s ease forwards;
 }
 
-@keyframes slideUp{
-to{
-transform:translateY(0);
-opacity:1;
-}
+@keyframes fadeUp{
+to{transform:translateY(0);opacity:1;}
 }
 
 h2{
@@ -98,14 +109,12 @@ margin-bottom:20px;
 color:#2d6a4f;
 }
 
-/* FORMULAR */
 input, textarea{
 width:100%;
 padding:15px;
 margin-bottom:15px;
 border-radius:10px;
 border:1px solid #ccc;
-font-family:'Poppins',sans-serif;
 transition:0.3s;
 }
 
@@ -139,20 +148,12 @@ background:#d8f3dc;
 color:#1b4332;
 border-radius:10px;
 text-align:center;
-font-weight:500;
 }
 
 /* SOCIAL */
 .social{
 margin-top:40px;
 text-align:center;
-opacity:0;
-animation:fadeIn 1.5s ease forwards;
-animation-delay:0.5s;
-}
-
-@keyframes fadeIn{
-to{opacity:1;}
 }
 
 .social a{
@@ -180,19 +181,50 @@ padding:25px;
 margin-top:80px;
 font-size:14px;
 }
+
+/* INIMIOARE ANIMATE */
+.heart{
+position:fixed;
+top:40%;
+font-size:40px;
+opacity:0;
+animation:heartAnim 2.5s ease forwards;
+z-index:999;
+}
+
+.heart.left{left:20px;}
+.heart.right{right:20px;}
+
+@keyframes heartAnim{
+0%{opacity:0;transform:scale(0.5);}
+30%{opacity:1;transform:scale(1.2);}
+70%{opacity:1;transform:scale(1);}
+100%{opacity:0;transform:scale(0.5);}
+}
 </style>
 </head>
 
 <body>
 
+<div class="heart left">❤️</div>
+<div class="heart right">❤️</div>
+
 <header>
+
+<!-- LOGO SVG -->
+<svg class="logo" viewBox="0 0 100 100" fill="white">
+<path d="M50 90s-35-20-35-45a20 20 0 0 1 35-10 20 20 0 0 1 35 10c0 25-35 45-35 45z"/>
+</svg>
+
 <h1>Suflet Mic</h1>
+
 <nav>
 <a href="index.html">Comunitate</a>
 <a href="poveste.html">Despre noi</a>
 <a href="marturii.html">Mărturii</a>
 <a href="contact.html" class="active">Contact</a>
 </nav>
+
 </header>
 
 <section>
@@ -208,15 +240,13 @@ font-size:14px;
 </form>
 
 <div class="success-message" id="success-msg">
-Mesajul a fost trimis cu succes 🤍 Îți vom răspunde cât mai curând.
+Mesajul a fost trimis cu succes 🤍
 </div>
 
 <div class="social">
 <h2>Ne găsești și aici</h2>
 <a href="https://t.me/sufletmiccareteasculta" target="_blank">Telegram</a>
 <a href="http://www.tiktok.com/@suflet.mic14" target="_blank">TikTok</a>
-<a href="https://www.instagram.com/un_suflet_mic_care_te_asculta" target="_blank">Instagram</a>
-<a href="https://www.facebook.com/share/1GVwoEyhzU/?mibextid=wwXIfr" target="_blank">Facebook</a>
 </div>
 
 </div>
@@ -230,9 +260,21 @@ Mesajul a fost trimis cu succes 🤍 Îți vom răspunde cât mai curând.
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-document.body.classList.add("fade-in");
+document.body.classList.add("loaded");
+
+/* TRanziție între pagini */
+document.querySelectorAll("a").forEach(link=>{
+link.addEventListener("click",function(e){
+if(this.href && this.href.includes(".html")){
+e.preventDefault();
+document.body.style.opacity="0";
+setTimeout(()=>{window.location=this.href;},400);
+}
+});
+});
 });
 
+/* EMAILJS */
 (function(){
 emailjs.init("_IVe9Vmte22ka5wMm");
 })();
@@ -245,16 +287,14 @@ emailjs.sendForm(
 "template_b9xtxlc",
 this
 ).then(function() {
-document.getElementById("success-msg").style.display = "block";
+document.getElementById("success-msg").style.display="block";
 document.getElementById("contact-form").reset();
-}, function(error) {
-alert("Eroare la trimitere.");
-console.log(error);
 });
 });
 </script>
 
 </body>
 </html>
+
 
 
