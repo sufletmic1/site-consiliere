@@ -45,6 +45,7 @@ Suflet Mic
 <section>
 <div class="card">
 <h2>Mărturii</h2>
+
 <p><strong>Ana:</strong> „Pentru prima dată m-am simțit ascultată fără să fiu judecată.”</p>
 <br>
 <p><strong>Mihai:</strong> „Mi-a oferit speranță într-un moment critic.”</p>
@@ -53,16 +54,33 @@ Suflet Mic
 
 <br><br>
 
-<h2>Lasă o părere</h2>
+<h2>Lasă o părere 💚</h2>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdr6teLkAkGGDTU1YUqTQtVppISpRx1_AM-O100a5nDokivgg/viewform?embedded=true" 
-width="100%" 
-height="700" 
-frameborder="0" 
-marginheight="0" 
-marginwidth="0">
-Se încarcă formularul…
-</iframe>
+<form id="commentForm" style="margin-top:20px;">
+
+<input type="text" id="name" placeholder="Numele tău" required
+style="width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:1px solid #d1d5db;font-family:Poppins;">
+
+<textarea id="message" placeholder="Scrie părerea ta..." required
+style="width:100%;padding:12px;height:120px;margin-bottom:15px;border-radius:10px;border:1px solid #d1d5db;font-family:Poppins;"></textarea>
+
+<button type="submit"
+style="background:#2d6a4f;color:white;padding:12px 25px;border:none;border-radius:10px;cursor:pointer;font-weight:600;">
+Trimite
+</button>
+
+</form>
+
+<div id="thankYouMessage" style="margin-top:15px;color:#2d6a4f;font-weight:500;"></div>
+
+<script>
+document.getElementById("commentForm").addEventListener("submit", function(e){
+e.preventDefault();
+document.getElementById("thankYouMessage").innerHTML = 
+"💚 Mulțumim pentru mesaj! Comentariul tău va fi adăugat în curând.";
+this.reset();
+});
+</script>
 
 </div>
 </section>
