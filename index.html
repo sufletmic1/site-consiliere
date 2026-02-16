@@ -16,7 +16,7 @@ box-sizing:border-box;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#f3f4f6;
+background:#f4f6f9;
 color:#1f2937;
 opacity:0;
 transition:opacity 0.6s ease;
@@ -30,13 +30,12 @@ opacity:1;
 header{
 background:linear-gradient(135deg,#1b4332,#2d6a4f);
 color:white;
-padding:60px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
-/* LOGO */
 .logo{
-width:70px;
+width:75px;
 margin:0 auto 15px;
 animation:float 3s ease-in-out infinite;
 }
@@ -46,7 +45,12 @@ animation:float 3s ease-in-out infinite;
 50%{transform:translateY(-6px);}
 }
 
-/* MENIU */
+header h1{
+font-weight:500;
+letter-spacing:1px;
+}
+
+/* MENIU ONG */
 nav{
 display:flex;
 flex-direction:column;
@@ -66,7 +70,6 @@ position:relative;
 overflow:hidden;
 }
 
-/* LINIE FULL WIDTH DIN MIJLOC */
 nav a::after{
 content:"";
 position:absolute;
@@ -85,7 +88,7 @@ width:100%;
 
 /* CONTENT */
 section{
-max-width:900px;
+max-width:850px;
 margin:80px auto;
 padding:0 20px;
 }
@@ -93,11 +96,11 @@ padding:0 20px;
 .card{
 background:white;
 padding:50px;
-border-radius:20px;
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
+border-radius:25px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+animation:fadeUp 1s ease forwards;
 opacity:0;
 transform:translateY(30px);
-animation:fadeUp 1s ease forwards;
 }
 
 @keyframes fadeUp{
@@ -107,12 +110,56 @@ transform:translateY(0);
 }
 }
 
+h2{
+color:#2d6a4f;
+margin-bottom:20px;
+}
+
+p{
+line-height:1.8;
+margin-bottom:15px;
+}
+
+/* MISSION */
+.mission{
+margin-top:50px;
+padding:40px;
+background:#f8fafc;
+border-radius:20px;
+border-left:6px solid #2d6a4f;
+}
+
+.mission ul{
+margin:20px 0;
+padding-left:20px;
+line-height:1.9;
+}
+
+/* ALERT RESPONSABIL */
+.alert{
+margin-top:30px;
+padding:20px;
+background:#ffe5e5;
+border-radius:15px;
+color:#7f1d1d;
+font-size:14px;
+}
+
+/* FOOTER */
 footer{
 background:#111827;
 color:#9ca3af;
 text-align:center;
-padding:25px;
+padding:30px;
 margin-top:80px;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.card{
+padding:30px;
+}
 }
 </style>
 </head>
@@ -137,15 +184,52 @@ margin-top:80px;
 </header>
 
 <section>
+
 <div class="card">
-<h2>Comunitatea noastră</h2>
-<p>Suntem un spațiu sigur pentru sufletele care au nevoie să fie ascultate.
-Aici construim sprijin, empatie și conexiune reală.</p>
+
+<h2>Cine suntem ca și comunitate</h2>
+
+<p>
+Suflet Mic este o comunitate construită pe ascultare, empatie și credință. 
+Suntem un spațiu sigur pentru cei care trec prin durere emoțională, traumă sau singurătate.
+</p>
+
+<div class="mission">
+
+<h2>Misiunea noastră</h2>
+
+<p>
+Ne dorim să construim o asociație de consiliere biblică dedicată persoanelor care au trecut prin traume profunde și răni sufletești.
+</p>
+
+<p>Suntem alături de cei care au experimentat:</p>
+
+<ul>
+<li>• Pierderea unei persoane prin sinucidere</li>
+<li>• Violență în familie</li>
+<li>• Bullying și umilință</li>
+<li>• Respingere, abandon sau marginalizare</li>
+<li>• Perioade în care nu mai găsesc dorința de a merge mai departe</li>
+</ul>
+
+<p>
+Credem că fiecare viață are valoare.
+Credem că vindecarea începe prin ascultare, credință și comunitate.
+Nu judecăm. Nu condamnăm. Suntem aici să ascultăm.
+</p>
+
 </div>
+
+<div class="alert">
+Dacă te afli într-o situație de urgență sau simți că ești în pericol imediat, te rugăm să apelezi 112 sau să contactezi o linie de sprijin specializată.
+</div>
+
+</div>
+
 </section>
 
 <footer>
-© 2026 Suflet Mic
+© 2026 Suflet Mic | Comunitate de sprijin și consiliere
 </footer>
 
 <script>
@@ -166,6 +250,7 @@ setTimeout(()=>{window.location=this.href;},400);
 
 </body>
 </html>
+
 
 
 
