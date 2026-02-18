@@ -71,6 +71,34 @@ nav a:hover::after{
 width:100%;
 }
 
+/* LINK TEXT PREMIUM */
+.link-highlight{
+color:#2d6a4f;
+font-weight:600;
+text-decoration:none;
+position:relative;
+transition:0.3s;
+}
+
+.link-highlight::after{
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+left:0;
+bottom:-3px;
+background:#2d6a4f;
+transition:0.3s;
+}
+
+.link-highlight:hover::after{
+width:100%;
+}
+
+.link-highlight:hover{
+opacity:0.8;
+}
+
 /* CONTENT */
 section{
 max-width:900px;
@@ -251,7 +279,11 @@ Ne dorim să construim o asociație de consiliere biblică dedicată persoanelor
 
 <p>
 Credem că fiecare viață are valoare.
-Nu judecăm. Nu condamnăm. Suntem aici să ascultăm.
+Nu judecăm. Nu condamnăm. 
+<a href="https://t.me/USERNAME_TAU" target="_blank" class="link-highlight">
+Suntem aici
+</a>
+să te ascultăm, fără judecată, și să te sprijinim să găsești soluții sigure și potrivite pentru tine.
 </p>
 
 <div class="verse" id="verse-box">
@@ -270,7 +302,7 @@ Nu trebuie să treci singur prin ceea ce trăiești.
 A vorbi cu cineva — fie online, fie la telefon — poate aduce liniște, claritate și sprijin real. Uneori, simplul fapt că ești ascultat face o diferență enormă.
 </p>
 <p>
-Dacă te confrunți cu situații dificile la școală, acasă sau în mediul online, ne poți scrie. Suntem aici să te ascultăm, fără judecată, și să te sprijinim să găsești soluții sigure și potrivite pentru tine.
+Dacă te confrunți cu situații dificile la școală, acasă sau în mediul online, ne poți scrie.
 </p>
 </div>
 
@@ -279,7 +311,9 @@ Dacă te confrunți cu situații dificile la școală, acasă sau în mediul onl
 te rugăm să apelezi <strong>112</strong> sau să contactezi o linie de sprijin specializată.
 <br><br>
 Dacă simți nevoia de a vorbi cu cineva, de a fi ascultat fără judecată și cu înțelegere,
-ne poți contacta prin pagina de Contact. Suntem aici pentru tine 🤍
+ne poți contacta prin pagina de 
+<a href="contact.html" class="link-highlight">Contact</a>.
+Suntem aici pentru tine 🤍
 </div>
 
 </div>
@@ -327,5 +361,3 @@ setInterval(changeVerse, 9000);
 
 </body>
 </html>
-
-
