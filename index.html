@@ -71,34 +71,6 @@ nav a:hover::after{
 width:100%;
 }
 
-/* LINK TEXT PREMIUM */
-.link-highlight{
-color:#2d6a4f;
-font-weight:600;
-text-decoration:none;
-position:relative;
-transition:0.3s;
-}
-
-.link-highlight::after{
-content:'';
-position:absolute;
-width:0%;
-height:2px;
-left:0;
-bottom:-3px;
-background:#2d6a4f;
-transition:0.3s;
-}
-
-.link-highlight:hover::after{
-width:100%;
-}
-
-.link-highlight:hover{
-opacity:0.8;
-}
-
 /* CONTENT */
 section{
 max-width:900px;
@@ -152,6 +124,29 @@ box-shadow:0 10px 30px rgba(0,0,0,0.04);
 color:#1b4332;
 margin-bottom:15px;
 font-size:20px;
+}
+
+/* LINK STYLE PREMIUM */
+.text-link{
+color:#2d6a4f;
+font-weight:600;
+text-decoration:none;
+position:relative;
+}
+
+.text-link::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-2px;
+width:0%;
+height:2px;
+background:#2d6a4f;
+transition:0.3s;
+}
+
+.text-link:hover::after{
+width:100%;
 }
 
 /* VERSET */
@@ -279,11 +274,7 @@ Ne dorim să construim o asociație de consiliere biblică dedicată persoanelor
 
 <p>
 Credem că fiecare viață are valoare.
-Nu judecăm. Nu condamnăm. 
-<a href="https://t.me/USERNAME_TAU" target="_blank" class="link-highlight">
-Suntem aici
-</a>
-să te ascultăm, fără judecată, și să te sprijinim să găsești soluții sigure și potrivite pentru tine.
+Nu judecăm. Nu condamnăm. Suntem aici să ascultăm.
 </p>
 
 <div class="verse" id="verse-box">
@@ -303,6 +294,10 @@ A vorbi cu cineva — fie online, fie la telefon — poate aduce liniște, clari
 </p>
 <p>
 Dacă te confrunți cu situații dificile la școală, acasă sau în mediul online, ne poți scrie.
+<a href="http://t.me/sufletmiccareteasculta" target="_blank" class="text-link">
+&lt;Suntem aici&gt;
+</a>
+să te ascultăm, fără judecată, și să te sprijinim să găsești soluții sigure și potrivite pentru tine.
 </p>
 </div>
 
@@ -312,7 +307,7 @@ te rugăm să apelezi <strong>112</strong> sau să contactezi o linie de sprijin
 <br><br>
 Dacă simți nevoia de a vorbi cu cineva, de a fi ascultat fără judecată și cu înțelegere,
 ne poți contacta prin pagina de 
-<a href="contact.html" class="link-highlight">Contact</a>.
+<a href="contact.html" class="text-link">&lt;Contact&gt;</a>.
 Suntem aici pentru tine 🤍
 </div>
 
