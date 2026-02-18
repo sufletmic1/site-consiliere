@@ -4,35 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Suflet Mic | Despre noi</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:#f3f4f6;color:#1f2937;}
-header{background:linear-gradient(135deg,#1b4332,#2d6a4f);color:white;padding:80px 20px;text-align:center;}
-.logo{display:flex;justify-content:center;align-items:center;gap:12px;font-size:28px;font-weight:600;}
-.logo svg{width:42px;height:42px;}
-nav{margin-top:35px;}
-nav a{color:white;text-decoration:none;margin:0 15px;font-weight:500;position:relative;}
-nav a::after{content:'';display:block;height:2px;width:0%;background:white;transition:0.3s;margin:auto;}
-nav a:hover::after{width:100%;}
-section{max-width:1100px;margin:80px auto;padding:0 20px;animation:fadeIn 1s ease;}
-.card{background:white;padding:50px;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,0.08);}
-h2{font-size:32px;margin-bottom:25px;color:#2d6a4f;}
-footer{background:#111827;color:#9ca3af;text-align:center;padding:30px;margin-top:100px;font-size:14px;}
-@keyframes fadeIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-@media(max-width:768px){nav a{display:block;margin:12px 0;}.card{padding:30px;}h2{font-size:24px;}}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f6f9;
+color:#1f2937;
+}
+
+header{
+background:linear-gradient(135deg,#1b4332,#2d6a4f);
+color:white;
+padding:70px 20px;
+text-align:center;
+}
+
+.logo{
+width:75px;
+margin:0 auto 15px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+}
+
+header h1{
+font-weight:500;
+letter-spacing:1px;
+}
+
+nav{
+margin-top:35px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:500;
+position:relative;
+}
+
+nav a::after{
+content:'';
+display:block;
+height:2px;
+width:0%;
+background:white;
+transition:0.3s;
+margin:auto;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+section{
+max-width:1100px;
+margin:80px auto;
+padding:0 20px;
+}
+
+.card{
+background:white;
+padding:50px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+h2{
+font-size:32px;
+margin-bottom:25px;
+color:#2d6a4f;
+}
+
+footer{
+background:#111827;
+color:#9ca3af;
+text-align:center;
+padding:30px;
+margin-top:100px;
+font-size:14px;
+}
+
+@media(max-width:768px){
+nav a{display:block;margin:12px 0;}
+.card{padding:30px;}
+h2{font-size:24px;}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">
-<svg viewBox="0 0 24 24" fill="white">
-<path d="M12 21s-6-4.35-9-8.28C-1.5 7.24 3.24 2 7.5 5.09 9.24 6.39 12 9 12 9s2.76-2.61 4.5-3.91C20.76 2 25.5 7.24 21 12.72 18 16.65 12 21 12 21z"/>
+
+<svg class="logo" viewBox="0 0 100 100" fill="white">
+<path d="M50 90s-35-20-35-45a20 20 0 0 1 35-10 20 20 0 0 1 35 10c0 25-35 45-35 45z"/>
 </svg>
-Suflet Mic
-</div>
+
+<h1>Suflet Mic</h1>
 
 <nav>
 <a href="index.html">Comunitate</a>
@@ -40,19 +117,24 @@ Suflet Mic
 <a href="marturii.html">Mărturii</a>
 <a href="contact.html">Contact</a>
 </nav>
+
 </header>
 
 <section>
 <div class="card">
+
 <h2>Despre noi</h2>
+
 <p>
 Am trecut prin pierdere, respingere și momente de întuneric profund.
 Am învățat că sprijinul sincer poate salva vieți.
 </p>
+
 <p>
 Această comunitate s-a născut din dorința de a oferi altora
 liniștea și înțelegerea pe care noi le-am căutat cândva.
 </p>
+
 </div>
 </section>
 
