@@ -1,401 +1,365 @@
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suflet Mic | Comunitate</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Poppins',sans-serif;
-background:#f4f6f9;
-color:#1f2937;
-}
-
-/* HEADER */
-header{
-background:linear-gradient(135deg,#1b4332,#2d6a4f);
-color:white;
-padding:70px 20px;
-text-align:center;
-}
-
-.logo{
-width:75px;
-margin:0 auto 15px;
-animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-6px);}
-}
-
-header h1{
-font-weight:500;
-letter-spacing:1px;
-}
-
-/* MENIU ORIZONTAL */
-nav{
-margin-top:35px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:500;
-position:relative;
-}
-
-nav a::after{
-content:'';
-display:block;
-height:2px;
-width:0%;
-background:white;
-transition:0.3s;
-margin:auto;
-}
-
-nav a:hover::after{
-width:100%;
-}
-
-/* CONTENT */
-section{
-max-width:900px;
-margin:80px auto;
-padding:0 20px;
-}
-
-.card{
-background:white;
-padding:55px;
-border-radius:25px;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-}
-
-h2{
-color:#2d6a4f;
-margin-bottom:20px;
-}
-
-p{
-line-height:1.8;
-margin-bottom:15px;
-}
-
-/* MISSION */
-.mission{
-margin-top:50px;
-padding:40px;
-background:#f8fafc;
-border-radius:20px;
-border-left:6px solid #2d6a4f;
-}
-
-.mission ul{
-margin:20px 0;
-padding-left:0;
-list-style:none;
-line-height:1.9;
-}
-
-.mission ul li{
-margin:14px 0;
-}
-
-/* BUTOANE MAI DRĂGUȚE */
-.situation-link{
-display:block;
-padding:18px 22px;
-background:linear-gradient(135deg,#ffffff,#f0fdf4);
-border-radius:20px;
-text-decoration:none;
-color:#1b4332;
-font-weight:500;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
-transition:all 0.3s ease;
-border:1px solid #e5e7eb;
-position:relative;
-overflow:hidden;
-}
-
-.situation-link:hover{
-transform:translateY(-4px);
-box-shadow:0 18px 35px rgba(0,0,0,0.1);
-background:linear-gradient(135deg,#edfdf4,#d8f3dc);
-}
-
-.situation-link::before{
-content:"🤍";
-position:absolute;
-right:18px;
-opacity:0.3;
-transition:0.3s;
-}
-
-.situation-link:hover::before{
-opacity:0.7;
-}
-
-/* IMPORTANT SECTION */
-.important{
-margin-top:50px;
-padding:40px;
-background:#edfdf4;
-border-radius:20px;
-border-left:6px solid #2d6a4f;
-box-shadow:0 10px 30px rgba(0,0,0,0.04);
-}
-
-.important h3{
-color:#1b4332;
-margin-bottom:15px;
-font-size:20px;
-}
-
-/* LINK STYLE PREMIUM */
-.text-link{
-color:#2d6a4f;
-font-weight:600;
-text-decoration:none;
-position:relative;
-}
-
-.text-link::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-2px;
-width:0%;
-height:2px;
-background:#2d6a4f;
-transition:0.3s;
-}
-
-.text-link:hover::after{
-width:100%;
-}
-
-/* VERSET */
-.verse{
-margin-top:40px;
-padding:30px;
-background:#ffffff;
-border-radius:20px;
-text-align:center;
-font-size:15px;
-color:#2d6a4f;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-min-height:110px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-transition:opacity 1.2s ease, filter 1.2s ease;
-}
-
-.verse.fade-out{
-opacity:0;
-filter:blur(4px);
-}
-
-.verse.fade-in{
-opacity:1;
-filter:blur(0);
-}
-
-#verse-text{
-font-style:italic;
-margin-bottom:10px;
-}
-
-#verse-ref{
-font-size:13px;
-font-weight:500;
-opacity:0.8;
-}
-
-/* ALERT */
-.alert{
-margin-top:40px;
-padding:30px;
-background:#d8f3dc;
-border-radius:18px;
-color:#1b4332;
-font-size:15px;
-line-height:1.9;
-border-left:6px solid #2d6a4f;
-}
-
-.alert strong{
-color:#0b3d2e;
-}
-
-/* FOOTER */
-footer{
-background:#111827;
-color:#9ca3af;
-text-align:center;
-padding:30px;
-margin-top:80px;
-font-size:14px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-.card{
-padding:30px;
-}
-nav a{
-display:block;
-margin:10px 0;
-}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-
-<svg class="logo" viewBox="0 0 100 100" fill="white">
-<path d="M50 90s-35-20-35-45a20 20 0 0 1 35-10 20 20 0 0 1 35 10c0 25-35 45-35 45z"/>
-</svg>
-
-<h1>Suflet Mic</h1>
-
-<nav>
-<a href="index.html">Comunitate</a>
-<a href="poveste.html">Despre noi</a>
-<a href="marturii.html">Mărturii</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-</header>
-
-<section>
-
-<div class="card">
-
-<h2>Cine suntem ca și comunitate</h2>
-
-<p>
-Suflet Mic este o comunitate construită pe ascultare, empatie și credință.
-Este un spațiu sigur pentru cei care trec prin durere emoțională, traumă sau singurătate.
-</p>
-
-<div class="mission">
-
-<h2>Misiunea noastră</h2>
-
-<p>
-Ne dorim să construim o asociație de consiliere biblică dedicată persoanelor care au trecut prin traume profunde și răni sufletești.
-</p>
-
-<ul>
-<li><a href="intelegere.html#sinucidere" class="situation-link">Pierderea unei persoane prin sinucidere</a></li>
-<li><a href="intelegere.html#violenta" class="situation-link">Violență în familie</a></li>
-<li><a href="intelegere.html#bullying" class="situation-link">Bullying și umilință</a></li>
-<li><a href="intelegere.html#respingere" class="situation-link">Respingere sau abandon</a></li>
-<li><a href="intelegere.html#epuizare" class="situation-link">Perioade în care dorința de a merge mai departe este slăbită</a></li>
-
-<li><a href="intelegere.html#abuz" class="situation-link">Abuz sexual</a></li>
-<li><a href="intelegere.html#copilarie-rece" class="situation-link">Copilărie cu certuri, răceală sau lipsă de iubire</a></li>
-<li><a href="intelegere.html#divort" class="situation-link">Separarea sau divorțul părinților</a></li>
-<li><a href="intelegere.html#doliu" class="situation-link">Pierderea unei persoane dragi (durere care persistă)</a></li>
-
-</ul>
-
-<p>
-Credem că fiecare viață are valoare.
-Nu judecăm. Nu condamnăm. Suntem aici să ascultăm.
-</p>
-
-<div class="verse" id="verse-box">
-<div id="verse-text"></div>
-<div id="verse-ref"></div>
-</div>
-
-</div>
-
-<div class="important">
-<h3>Important:</h3>
-<p>
-Nu trebuie să treci singur prin ceea ce trăiești.
-</p>
-<p>
-A vorbi cu cineva — fie online, fie la telefon — poate aduce liniște, claritate și sprijin real.
-</p>
-<p>
-Dacă te confrunți cu situații dificile la școală, acasă sau în mediul online, ne poți scrie.
-<a href="http://t.me/sufletmiccareteasculta" target="_blank" class="text-link">
-&lt;Suntem aici&gt;
-</a>
-</p>
-</div>
-
-<div class="alert">
-<strong>Dacă te afli într-o situație de urgență sau simți că ești în pericol imediat,</strong>
-apelează <strong>112</strong>.
-<br><br>
-Ne poți contacta prin pagina de 
-<a href="contact.html" class="text-link">&lt;Contact&gt;</a>.
-Suntem aici pentru tine 🤍
-</div>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 Suflet Mic | Comunitate de sprijin și consiliere
-</footer>
-
-<script>
-const verses = [
-{ text:"Domnul este aproape de cei cu inima zdrobită.", ref:"Psalmul 34:18"},
-{ text:"Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.", ref:"Matei 11:28"},
-{ text:"El vindecă pe cei cu inima zdrobită și le leagă rănile.", ref:"Psalmul 147:3"},
-{ text:"Nu te teme, căci Eu sunt cu tine.", ref:"Isaia 41:10"},
-{ text:"Aruncă asupra Domnului povara ta, și El te va sprijini.", ref:"Psalmul 55:22"},
-{ text:"Domnul este tăria mea și scutul meu.", ref:"Psalmul 28:7"},
-{ text:"Căci Eu știu gândurile pe care le am cu privire la voi… gânduri de pace.", ref:"Ieremia 29:11"},
-{ text:"Lumina strălucește în întuneric.", ref:"Ioan 1:5"},
-{ text:"Harul Meu îți este de ajuns.", ref:"2 Corinteni 12:9"},
-{ text:"Plânsul poate ține o noapte, dar bucuria vine dimineața.", ref:"Psalmul 30:5"}
-];
-
-let current = 0;
-const verseBox = document.getElementById("verse-box");
-const verseText = document.getElementById("verse-text");
-const verseRef = document.getElementById("verse-ref");
-
-function changeVerse(){
-verseBox.classList.add("fade-out");
-
-setTimeout(() => {
-verseText.textContent = "„" + verses[current].text + "”";
-verseRef.textContent = verses[current].ref;
-verseBox.classList.remove("fade-out");
-verseBox.classList.add("fade-in");
-current = (current + 1) % verses.length;
-}, 1000);
-}
-
-changeVerse();
-setInterval(changeVerse, 9000);
-</script>
-
-</body>
+<!DOCTYPE html> 
+<html lang="ro"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Suflet Mic | Comunitate</title> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+<style> 
+*{ 
+margin:0; 
+padding:0; 
+box-sizing:border-box; 
+} 
+body{ 
+font-family:'Poppins',sans-serif; 
+background:#f4f6f9; 
+color:#1f2937; 
+} 
+/* HEADER */ 
+header{ 
+background:linear-gradient(135deg,#1b4332,#2d6a4f); 
+color:white; 
+padding:70px 20px; 
+text-align:center; 
+} 
+.logo{ 
+width:75px; 
+margin:0 auto 15px; 
+animation:float 3s ease-in-out infinite; 
+} 
+@keyframes float{ 
+0%,100%{transform:translateY(0);} 
+50%{transform:translateY(-6px);} 
+} 
+header h1{ 
+font-weight:500; 
+letter-spacing:1px; 
+} 
+/* MENIU ORIZONTAL */ 
+nav{ 
+margin-top:35px; 
+} 
+nav a{ 
+color:white; 
+text-decoration:none; 
+margin:0 15px; 
+font-weight:500; 
+position:relative; 
+} 
+nav a::after{ 
+content:''; 
+display:block; 
+height:2px; 
+width:0%; 
+background:white; 
+transition:0.3s; 
+margin:auto; 
+} 
+nav a:hover::after{ 
+width:100%; 
+} 
+/* CONTENT */ 
+section{ 
+max-width:900px; 
+margin:80px auto; 
+padding:0 20px; 
+} 
+.card{ 
+background:white; 
+padding:55px; 
+border-radius:25px; 
+box-shadow:0 20px 50px rgba(0,0,0,0.08); 
+} 
+h2{ 
+color:#2d6a4f; 
+margin-bottom:20px; 
+} 
+p{ 
+line-height:1.8; 
+margin-bottom:15px; 
+} 
+/* MISSION */ 
+.mission{ 
+margin-top:50px; 
+padding:40px; 
+background:#f8fafc; 
+border-radius:20px; 
+border-left:6px solid #2d6a4f; 
+} 
+.mission ul{ 
+margin:20px 0; 
+padding-left:0; 
+list-style:none; 
+line-height:1.9; 
+} 
+.mission ul li{ 
+margin:12px 0; 
+} 
+/* BUTOANE SITUATII */ 
+.situation-link{ 
+display:block; 
+padding:15px 20px; 
+background:#ffffff; 
+border-radius:15px; 
+text-decoration:none; 
+color:#1b4332; 
+font-weight:500; 
+box-shadow:0 8px 20px rgba(0,0,0,0.05); 
+transition:all 0.3s ease; 
+border:1px solid #e5e7eb; 
+} 
+.situation-link:hover{ 
+transform:translateY(-3px); 
+box-shadow:0 12px 25px rgba(0,0,0,0.08); 
+background:#edfdf4; 
+} 
+/* IMPORTANT SECTION */ 
+.important{ 
+margin-top:50px; 
+padding:40px; 
+background:#edfdf4; 
+border-radius:20px; 
+border-left:6px solid #2d6a4f; 
+box-shadow:0 10px 30px rgba(0,0,0,0.04); 
+} 
+.important h3{ 
+color:#1b4332; 
+margin-bottom:15px; 
+font-size:20px; 
+} 
+/* LINK STYLE PREMIUM */ 
+.text-link{ 
+color:#2d6a4f; 
+font-weight:600; 
+text-decoration:none; 
+position:relative; 
+} 
+.text-link::after{ 
+content:''; 
+position:absolute; 
+left:0; 
+bottom:-2px; 
+width:0%; 
+height:2px; 
+background:#2d6a4f; 
+transition:0.3s; 
+} 
+.text-link:hover::after{ 
+width:100%; 
+} 
+/* VERSET */ 
+.verse{ 
+margin-top:40px; 
+padding:30px; 
+background:#ffffff; 
+border-radius:20px; 
+text-align:center; 
+font-size:15px; 
+color:#2d6a4f; 
+box-shadow:0 10px 30px rgba(0,0,0,0.05); 
+min-height:110px; 
+display:flex; 
+flex-direction:column; 
+justify-content:center; 
+transition:opacity 1.2s ease, filter 1.2s ease; 
+} 
+.verse.fade-out{ 
+opacity:0; 
+filter:blur(4px); 
+} 
+.verse.fade-in{ 
+opacity:1; 
+filter:blur(0); 
+} 
+#verse-text{ 
+font-style:italic; 
+margin-bottom:10px; 
+} 
+#verse-ref{ 
+font-size:13px; 
+font-weight:500; 
+opacity:0.8; 
+} 
+/* ALERT */ 
+.alert{ 
+margin-top:40px; 
+padding:30px; 
+background:#d8f3dc; 
+border-radius:18px; 
+color:#1b4332; 
+font-size:15px; 
+line-height:1.9; 
+border-left:6px solid #2d6a4f; 
+} 
+.alert strong{ 
+color:#0b3d2e; 
+} 
+/* FOOTER */ 
+footer{ 
+background:#111827; 
+color:#9ca3af; 
+text-align:center; 
+padding:30px; 
+margin-top:80px; 
+font-size:14px; 
+} 
+/* RESPONSIVE */ 
+@media(max-width:768px){ 
+.card{ 
+padding:30px; 
+} 
+nav a{ 
+display:block; 
+margin:10px 0; 
+} 
+} 
+</style> 
+</head> 
+<body> 
+<header> 
+<svg class="logo" viewBox="0 0 100 100" fill="white"> 
+<path d="M50 90s-35-20-35-45a20 20 0 0 1 35-10 20 20 0 0 1 35 10c0 25-35 45-35 45z"/> 
+</svg> 
+<h1>Suflet Mic</h1> 
+<nav> 
+<a href="index.html">Comunitate</a> 
+<a href="poveste.html">Despre noi</a> 
+<a href="marturii.html">Mărturii</a> 
+<a href="contact.html">Contact</a> 
+</nav> 
+</header> 
+<section> 
+<div class="card"> 
+<h2>Cine suntem ca și comunitate</h2> 
+<p> 
+Suflet Mic este o comunitate construită pe ascultare, empatie și credință. 
+Este un spațiu sigur pentru cei care trec prin durere emoțională, traumă sau singurătate. 
+</p> 
+<div class="mission"> 
+<h2>Misiunea noastră</h2> 
+<p> 
+Ne dorim să construim o asociație de consiliere biblică dedicată persoanelor care au trecut prin traume profunde și răni sufletești. 
+</p> 
+<ul> 
+<li> 
+<a href="intelegere.html#sinucidere" class="situation-link"> 
+Pierderea unei persoane prin sinucidere 
+</a> 
+</li> 
+<li> 
+<a href="intelegere.html#violenta" class="situation-link"> 
+Violență în familie 
+</a> 
+</li> 
+<li> 
+<a href="intelegere.html#bullying" class="situation-link"> 
+Bullying și umilință 
+</a> 
+</li> 
+<li> 
+<a href="intelegere.html#respingere" class="situation-link"> 
+Respingere sau abandon 
+</a> 
+</li> 
+<li> 
+<a href="intelegere.html#epuizare" class="situation-link"> 
+Perioade în care dorința de a merge mai departe este slăbită 
+</a> 
+</li> 
+
+<li> 
+<a href="intelegere.html#abuz" class="situation-link"> 
+Abuz sexual 
+</a> 
+</li> 
+
+<li> 
+<a href="intelegere.html#copilarie-rece" class="situation-link"> 
+Copilărie cu certuri, răceală sau lipsă de iubire 
+</a> 
+</li> 
+
+<li> 
+<a href="intelegere.html#divort" class="situation-link"> 
+Separarea sau divorțul părinților 
+</a> 
+</li> 
+
+<li> 
+<a href="intelegere.html#doliu" class="situation-link"> 
+Pierderea unei persoane dragi (durere care persistă) 
+</a> 
+</li> 
+
+</ul> 
+<p> 
+Credem că fiecare viață are valoare. 
+Nu judecăm. Nu condamnăm. Suntem aici să ascultăm. 
+</p> 
+<div class="verse" id="verse-box"> 
+<div id="verse-text"></div> 
+<div id="verse-ref"></div> 
+</div> 
+</div> 
+<div class="important"> 
+<h3>Important:</h3> 
+<p> 
+Nu trebuie să treci singur prin ceea ce trăiești. 
+</p> 
+<p> 
+A vorbi cu cineva — fie online, fie la telefon — poate aduce liniște, claritate și sprijin real. Uneori, simplul fapt că ești ascultat face o diferență enormă. 
+</p> 
+<p> 
+Dacă te confrunți cu situații dificile la școală, acasă sau în mediul online, ne poți scrie. 
+<a href="http://t.me/sufletmiccareteasculta" target="_blank" class="text-link"> 
+&lt;Suntem aici&gt; 
+</a> 
+să te ascultăm, fără judecată, și să te sprijinim să găsești soluții sigure și potrivite pentru tine. 
+</p> 
+</div> 
+<div class="alert"> 
+<strong>Dacă te afli într-o situație de urgență sau simți că ești în pericol imediat,</strong> 
+te rugăm să apelezi <strong>112</strong> sau să contactezi o linie de sprijin specializată. 
+<br><br> 
+Dacă simți nevoia de a vorbi cu cineva, de a fi ascultat fără judecată și cu înțelegere, ne poți contacta prin pagina de 
+<a href="contact.html" class="text-link">&lt;Contact&gt;</a>. 
+Suntem aici pentru tine 🤍 
+</div> 
+</div> 
+</section> 
+<footer> 
+© 2026 Suflet Mic | Comunitate de sprijin și consiliere 
+</footer> 
+<script> 
+const verses = [ 
+{ text:"Domnul este aproape de cei cu inima zdrobită.", ref:"Psalmul 34:18"}, 
+{ text:"Veniți la Mine, toți cei trudiți și împovărați, și Eu vă voi da odihnă.", ref:"Matei 11:28"}, 
+{ text:"El vindecă pe cei cu inima zdrobită și le leagă rănile.", ref:"Psalmul 147:3"}, 
+{ text:"Nu te teme, căci Eu sunt cu tine.", ref:"Isaia 41:10"}, 
+{ text:"Aruncă asupra Domnului povara ta, și El te va sprijini.", ref:"Psalmul 55:22"}, 
+{ text:"Domnul este tăria mea și scutul meu.", ref:"Psalmul 28:7"}, 
+{ text:"Căci Eu știu gândurile pe care le am cu privire la voi… gânduri de pace.", ref:"Ieremia 29:11"}, 
+{ text:"Lumina strălucește în întuneric.", ref:"Ioan 1:5"}, 
+{ text:"Harul Meu îți este de ajuns.", ref:"2 Corinteni 12:9"}, 
+{ text:"Plânsul poate ține o noapte, dar bucuria vine dimineața.", ref:"Psalmul 30:5"} 
+]; 
+let current = 0; 
+const verseBox = document.getElementById("verse-box"); 
+const verseText = document.getElementById("verse-text"); 
+const verseRef = document.getElementById("verse-ref"); 
+function changeVerse(){ 
+verseBox.classList.add("fade-out"); 
+setTimeout(() => { 
+verseText.textContent = "„" + verses[current].text + "”"; 
+verseRef.textContent = verses[current].ref; 
+verseBox.classList.remove("fade-out"); 
+verseBox.classList.add("fade-in"); 
+current = (current + 1) % verses.length; 
+}, 1000); 
+} 
+changeVerse(); 
+setInterval(changeVerse, 9000); 
+</script> 
+</body> 
 </html>
