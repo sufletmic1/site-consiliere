@@ -112,27 +112,41 @@ line-height:1.9;
 }
 
 .mission ul li{
-margin:12px 0;
+margin:14px 0;
 }
 
-/* BUTOANE SITUATII */
+/* BUTOANE MAI DRĂGUȚE */
 .situation-link{
 display:block;
-padding:15px 20px;
-background:#ffffff;
-border-radius:15px;
+padding:18px 22px;
+background:linear-gradient(135deg,#ffffff,#f0fdf4);
+border-radius:20px;
 text-decoration:none;
 color:#1b4332;
 font-weight:500;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
 transition:all 0.3s ease;
 border:1px solid #e5e7eb;
+position:relative;
+overflow:hidden;
 }
 
 .situation-link:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(0,0,0,0.08);
-background:#edfdf4;
+transform:translateY(-4px);
+box-shadow:0 18px 35px rgba(0,0,0,0.1);
+background:linear-gradient(135deg,#edfdf4,#d8f3dc);
+}
+
+.situation-link::before{
+content:"🤍";
+position:absolute;
+right:18px;
+opacity:0.3;
+transition:0.3s;
+}
+
+.situation-link:hover::before{
+opacity:0.7;
 }
 
 /* IMPORTANT SECTION */
@@ -290,35 +304,17 @@ Ne dorim să construim o asociație de consiliere biblică dedicată persoanelor
 </p>
 
 <ul>
-<li>
-<a href="intelegere.html#sinucidere" class="situation-link">
-Pierderea unei persoane prin sinucidere
-</a>
-</li>
+<li><a href="intelegere.html#sinucidere" class="situation-link">Pierderea unei persoane prin sinucidere</a></li>
+<li><a href="intelegere.html#violenta" class="situation-link">Violență în familie</a></li>
+<li><a href="intelegere.html#bullying" class="situation-link">Bullying și umilință</a></li>
+<li><a href="intelegere.html#respingere" class="situation-link">Respingere sau abandon</a></li>
+<li><a href="intelegere.html#epuizare" class="situation-link">Perioade în care dorința de a merge mai departe este slăbită</a></li>
 
-<li>
-<a href="intelegere.html#violenta" class="situation-link">
-Violență în familie
-</a>
-</li>
+<li><a href="intelegere.html#abuz" class="situation-link">Abuz sexual</a></li>
+<li><a href="intelegere.html#copilarie-rece" class="situation-link">Copilărie cu certuri, răceală sau lipsă de iubire</a></li>
+<li><a href="intelegere.html#divort" class="situation-link">Separarea sau divorțul părinților</a></li>
+<li><a href="intelegere.html#doliu" class="situation-link">Pierderea unei persoane dragi (durere care persistă)</a></li>
 
-<li>
-<a href="intelegere.html#bullying" class="situation-link">
-Bullying și umilință
-</a>
-</li>
-
-<li>
-<a href="intelegere.html#respingere" class="situation-link">
-Respingere sau abandon
-</a>
-</li>
-
-<li>
-<a href="intelegere.html#epuizare" class="situation-link">
-Perioade în care dorința de a merge mai departe este slăbită
-</a>
-</li>
 </ul>
 
 <p>
@@ -339,23 +335,21 @@ Nu judecăm. Nu condamnăm. Suntem aici să ascultăm.
 Nu trebuie să treci singur prin ceea ce trăiești.
 </p>
 <p>
-A vorbi cu cineva — fie online, fie la telefon — poate aduce liniște, claritate și sprijin real. Uneori, simplul fapt că ești ascultat face o diferență enormă.
+A vorbi cu cineva — fie online, fie la telefon — poate aduce liniște, claritate și sprijin real.
 </p>
 <p>
 Dacă te confrunți cu situații dificile la școală, acasă sau în mediul online, ne poți scrie.
 <a href="http://t.me/sufletmiccareteasculta" target="_blank" class="text-link">
 &lt;Suntem aici&gt;
 </a>
-să te ascultăm, fără judecată, și să te sprijinim să găsești soluții sigure și potrivite pentru tine.
 </p>
 </div>
 
 <div class="alert">
 <strong>Dacă te afli într-o situație de urgență sau simți că ești în pericol imediat,</strong>
-te rugăm să apelezi <strong>112</strong> sau să contactezi o linie de sprijin specializată.
+apelează <strong>112</strong>.
 <br><br>
-Dacă simți nevoia de a vorbi cu cineva, de a fi ascultat fără judecată și cu înțelegere,
-ne poți contacta prin pagina de 
+Ne poți contacta prin pagina de 
 <a href="contact.html" class="text-link">&lt;Contact&gt;</a>.
 Suntem aici pentru tine 🤍
 </div>
