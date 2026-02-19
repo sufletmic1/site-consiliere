@@ -3,259 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Înțelegere</title>
+<title>Suflet Mic | Înțelegere</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:#f4f6f9;color:#1f2937;}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+header{
+background:linear-gradient(135deg,#1b4332,#2d6a4f);
+color:white;
+padding:90px 20px;
+text-align:center;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(180deg, #f9fafc 0%, #f3f4f8 100%);
-    color: #2e2e2e;
-    line-height: 1.8;
+header h1{
+font-family:'Playfair Display',serif;
+font-weight:600;
+font-size:36px;
+margin-bottom:25px;
 }
 
-header {
-    text-align: center;
-    padding: 80px 20px 40px;
+.header-message{
+max-width:750px;
+margin:0 auto 35px;
+line-height:1.9;
+font-weight:300;
+font-size:18px;
 }
 
-header h1 {
-    font-weight: 500;
-    font-size: 34px;
-    margin-bottom: 15px;
-    color: #1f1f1f;
+.contact-btn{
+display:inline-block;
+padding:15px 35px;
+background:white;
+color:#1b4332;
+border-radius:35px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 12px 30px rgba(0,0,0,0.2);
 }
 
-header p {
-    color: #6b7280;
-    font-size: 17px;
+.contact-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 18px 40px rgba(0,0,0,0.25);
 }
 
-section {
-    max-width: 820px;
-    margin: 0 auto 100px;
-    padding: 0 20px;
+section{
+max-width:850px;
+margin:80px auto;
+padding:0 20px;
 }
 
-.block {
-    background: white;
-    padding: 60px 50px;
-    margin-bottom: 60px;
-    border-radius: 18px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
-    transition: 0.3s ease;
+.block{
+background:white;
+padding:55px;
+border-radius:30px;
+box-shadow:0 25px 60px rgba(0,0,0,0.08);
+margin-bottom:70px;
+scroll-margin-top:120px;
 }
 
-.block:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+h2{
+font-family:'Playfair Display',serif;
+color:#2d6a4f;
+margin-bottom:25px;
+font-weight:600;
 }
 
-h2 {
-    font-weight: 500;
-    font-size: 26px;
-    margin-bottom: 30px;
-    color: #1f1f1f;
+p{
+line-height:1.95;
+margin-bottom:18px;
+font-size:16px;
 }
 
-p {
-    margin-bottom: 20px;
-    font-size: 17px;
-    color: #444;
+.encourage{
+margin-top:25px;
+padding:22px;
+background:#edfdf4;
+border-left:4px solid #2d6a4f;
+border-radius:18px;
+font-weight:500;
 }
 
-.encourage {
-    margin-top: 35px;
-    padding: 25px 30px;
-    background: #eef2ff;
-    border-left: 4px solid #818cf8;
-    border-radius: 12px;
-    font-weight: 500;
-    color: #3730a3;
+.button-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:25px;
 }
 
-.button-row {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.back{
+text-decoration:none;
+color:#2d6a4f;
+font-weight:500;
 }
 
-.back {
-    text-decoration: none;
-    color: #888;
-    font-size: 14px;
-    transition: 0.2s;
+.write{
+text-decoration:none;
+background:#2d6a4f;
+color:white;
+padding:10px 22px;
+border-radius:25px;
+font-weight:500;
+transition:0.3s;
 }
 
-.back:hover {
-    color: #555;
+.write:hover{
+background:#1b4332;
 }
 
-.write {
-    text-decoration: none;
-    background: #6366f1;
-    color: white;
-    padding: 12px 22px;
-    border-radius: 30px;
-    font-size: 14px;
-    transition: 0.2s;
+footer{
+background:#111827;
+color:#9ca3af;
+text-align:center;
+padding:30px;
+margin-top:80px;
+font-size:14px;
 }
-
-.write:hover {
-    background: #4f46e5;
-    transform: translateY(-2px);
-}
-
-footer {
-    text-align: center;
-    padding: 40px 20px 60px;
-    color: #9ca3af;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-
-    .block {
-        padding: 40px 25px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Nu trebuie să duci totul singur.</h1>
-    <p>Dacă te regăsești în oricare dintre aceste experiențe, suntem aici să te ascultăm.</p>
+<h1>Viața ta contează. Și nu trebuie să treci singur prin asta.</h1>
+
+<p class="header-message">
+Indiferent dacă treci prin pierdere, violență, respingere, epuizare sau prin alte momente care apasă greu,
+vrem să știi că suntem aici pentru tine.
+Te ascultăm fără judecată. Fără grabă. Cu respect și grijă reală.
+Dacă simți că ai nevoie să vorbești, să te descarci sau pur și simplu să fii auzit,
+ne poți scrie oricând, la orice oră.
+</p>
+
+<a href="contact.html" class="contact-btn">Contactează-ne</a>
 </header>
 
 <section>
 
-<!-- SINUCIDERE -->
+<!-- 1 SINUCIDERE -->
 <div class="block" id="sinucidere">
 <h2>Pierderea unei persoane prin sinucidere</h2>
-
-<p>
-Durerea aceasta nu seamănă cu nimic altceva.
-Nu este doar tristețe. Este o vinovăție care se strecoară în fiecare gând.
-„Dacă aș fi sunat.”
-„Dacă aș fi observat.”
-„Dacă aș fi făcut mai mult.”
-</p>
-
-<p>
-Mintea ta reface ultimele conversații de sute de ori. Cauți indicii, cuvinte ascunse, semne pe care poate nu le-ai văzut. Și fiecare reconstituire doare din nou.
-</p>
-
-<p>
-Nu este furie. Este sentimentul că poate ai fi putut salva ceva.
-Este lupta interioară dintre „nu era responsabilitatea mea” și „dar totuși…”.
-</p>
-
-<p>
-Și apoi rămâne golul. O absență care nu doar că lipsește — ci apasă. În fiecare zi.
-</p>
-
+<p>Durerea aceasta nu seamănă cu nimic altceva. Nu este doar tristețe. Este vinovăția care te urmărește în fiecare gând.</p>
+<p>„Dacă aș fi sunat.” „Dacă aș fi observat.” „Dacă aș fi făcut mai mult.” Mintea ta reface ultimele conversații iar și iar, căutând un semn pe care poate nu l-ai văzut.</p>
+<p>Nu este furie. Este sentimentul că poate ai fi putut salva ceva. Și golul care rămâne apasă zilnic.</p>
 <div class="encourage">
-🤍 Nu ai avut puterea să controlezi o decizie care nu a fost a ta. Vinovăția ta arată cât de mult îți păsa. Dar responsabilitatea nu a fost niciodată pe umerii tăi.
+🤍 Nu ai avut puterea să controlezi o decizie care nu a fost a ta. Vinovăția ta arată cât de mult ai iubit. Dar responsabilitatea nu a fost niciodată pe umerii tăi.
 </div>
-
 <div class="button-row">
-<a href="#" class="back">← Înapoi</a>
+<a href="index.html#sinucidere" class="back">← Înapoi</a>
 <a href="https://t.me/+Q-zKSAyeoCZmNDhk" target="_blank" class="write">Scrie-ne</a>
 </div>
 </div>
 
-<!-- COPILARIE -->
-<div class="block" id="copilarie">
-<h2>Copilărie cu certuri, răceală sau lipsă de iubire</h2>
-
-<p>
-Când un copil crește într-o casă unde există tensiune constantă, ceva în interiorul lui învață prea devreme să fie atent la pericol.
-Nu la pericol fizic neapărat.
-Ci la tonuri. La uși trântite. La schimbări subtile în voce.
-Învață să citească atmosfera înainte să învețe să scrie.
-</p>
-
-<p>
-Poate ai devenit copilul care nu cere.
-Care nu plânge prea tare.
-Care nu deranjează.
-</p>
-
-<p>
-Poate ai simțit că iubirea vine condiționat.
-Că trebuie să fii „mai bun”, „mai cuminte”, „mai puțin”.
-</p>
-
-<p>
-Un copil nu ar trebui să simtă că trebuie să își câștige locul în propria casă.
-Dar când iubirea lipsește sau este rece, copilul nu se întreabă „Ce e în neregulă cu adulții?”
-Se întreabă: „Ce e în neregulă cu mine?”
-</p>
-
-<p>
-Iar această întrebare poate rămâne în tine ani întregi.
-</p>
-
+<!-- 2 VIOLENTA -->
+<div class="block" id="violenta">
+<h2>Violență în familie</h2>
+<p>Violența nu este doar momentul în care cineva ridică mâna. Este frica dinainte. Este tensiunea constantă. Este mersul pe vârfuri.</p>
+<p>Poate ai început să crezi că dacă ai fi fost diferit, lucrurile s-ar fi schimbat. Dar nimeni nu merită să trăiască în frică.</p>
+<p>Când trăiești prea mult într-un mediu nesigur, începi să te îndoiești de tine.</p>
 <div class="encourage">
-🤍 Nu ai fost prea sensibil. Ai fost un copil care avea nevoie de siguranță și căldură. Și încă meriți acel tip de iubire care nu te face să te simți o povară.
+🤍 Nu ai fost prea sensibil. Ai fost într-un loc care nu era sigur. Și meriți liniște.
+</div>
+<div class="button-row">
+<a href="index.html#violenta" class="back">← Înapoi</a>
+<a href="https://t.me/+gZZYNX_V0mViZjE0" target="_blank" class="write">Scrie-ne</a>
+</div>
 </div>
 
+<!-- 3 BULLYING -->
+<div class="block" id="bullying">
+<h2>Bullying și umilință</h2>
+<p>Când umilința se repetă, începi să te micșorezi fără să-ți dai seama.</p>
+<p>Poate ți s-a spus că e o glumă. Dar pentru tine nu a fost. A fost rușine. A fost teamă. A fost tăcere.</p>
+<p>Bullying-ul schimbă felul în care te vezi.</p>
+<div class="encourage">
+🤍 Vocea celor care te-au rănit nu este adevărul despre tine.
+</div>
 <div class="button-row">
-<a href="#" class="back">← Înapoi</a>
+<a href="index.html#bullying" class="back">← Înapoi</a>
+<a href="https://t.me/+yjIz9Noovk0wZDFk" target="_blank" class="write">Scrie-ne</a>
+</div>
+</div>
+
+<!-- 4 RESPINGERE -->
+<div class="block" id="respingere">
+<h2>Respingere sau abandon</h2>
+<p>Respingerea atinge nevoia profundă de a aparține.</p>
+<p>Când cineva pleacă, mintea șoptește: „Nu sunt suficient.”</p>
+<p>Abandonul poate crea frica că toți vor pleca.</p>
+<div class="encourage">
+🤍 Plecarea cuiva nu este măsura valorii tale.
+</div>
+<div class="button-row">
+<a href="index.html#respingere" class="back">← Înapoi</a>
+<a href="https://t.me/+NQPixQgjx-tjNmQ0" target="_blank" class="write">Scrie-ne</a>
+</div>
+</div>
+
+<!-- 5 EPUIZARE -->
+<div class="block" id="epuizare">
+<h2>Perioade în care dorința de a merge mai departe este slăbită</h2>
+<p>Uneori este doar epuizare emoțională.</p>
+<p>Lucrurile care altădată aduceau bucurie par acum goale.</p>
+<p>Nu este lipsă de voință. Este sufletul obosit.</p>
+<div class="encourage">
+🤍 Dacă încă citești, în tine există o scânteie.
+</div>
+<div class="button-row">
+<a href="index.html#epuizare" class="back">← Înapoi</a>
+<a href="https://t.me/+XHcA0ne26M9lMGVk" target="_blank" class="write">Scrie-ne</a>
+</div>
+</div>
+
+<!-- 6 ABUZ -->
+<div class="block" id="abuz">
+<h2>Abuz sexual</h2>
+<p>Abuzul sexual rupe siguranța și încrederea.</p>
+<p>Poate porți rușine care nu îți aparține.</p>
+<div class="encourage">
+🤍 Nu a fost vina ta. Niciodată.
+</div>
+<div class="button-row">
+<a href="index.html#abuz" class="back">← Înapoi</a>
+<a href="https://t.me/+1H_Z7Xeq7ARlY2Y0" target="_blank" class="write">Scrie-ne</a>
+</div>
+</div>
+
+<!-- 7 COPILARIE -->
+<div class="block" id="copilarie-rece">
+<h2>Copilărie cu certuri, răceală sau lipsă de iubire</h2>
+<p>Când crești într-o casă cu tensiune, înveți să fii atent la orice detaliu.</p>
+<p>Poate ai simțit că trebuie să meriți iubirea.</p>
+<div class="encourage">
+🤍 Încă meriți siguranță și blândețe.
+</div>
+<div class="button-row">
+<a href="index.html#copilarie-rece" class="back">← Înapoi</a>
 <a href="https://t.me/+D4lBOsxU42o4NTdk" target="_blank" class="write">Scrie-ne</a>
 </div>
 </div>
 
-<!-- DURERE PERSISTENTA -->
-<div class="block" id="doliu">
-<h2>Pierderea unei persoane dragi (durere care persistă)</h2>
-
-<p>
-Există pierderi care nu trec.
-Nu pentru că nu ai încercat.
-Ci pentru că legătura a fost reală.
-</p>
-
-<p>
-Poate au trecut ani.
-Poate funcționezi, muncești, zâmbești.
-Și totuși, există momente în care ceva te lovește pe neașteptate:
-un miros, o melodie, o dată din calendar.
-Și dintr-o dată, ești din nou acolo.
-</p>
-
-<p>
-Durerea care persistă nu înseamnă stagnare.
-Înseamnă atașament profund.
-</p>
-
+<!-- 8 DIVORT -->
+<div class="block" id="divort">
+<h2>Separarea sau divorțul părinților</h2>
+<p>Când părinții se despart, stabilitatea copilului se rupe.</p>
+<p>Poate ai simțit că trebuia să repari ceva.</p>
 <div class="encourage">
-🤍 Faptul că încă simți nu este slăbiciune. Este dovada că ai iubit. Iar iubirea adevărată nu dispare doar pentru că timpul trece.
+🤍 Nu era responsabilitatea ta.
+</div>
+<div class="button-row">
+<a href="index.html#divort" class="back">← Înapoi</a>
+<a href="https://t.me/+SThSAPFSHJswYjk0" target="_blank" class="write">Scrie-ne</a>
+</div>
 </div>
 
+<!-- 9 DOLIU -->
+<div class="block" id="doliu">
+<h2>Pierderea unei persoane dragi (durere care persistă)</h2>
+<p>Unele pierderi nu dispar. Se transformă.</p>
+<p>Pot reveni în cele mai neașteptate momente.</p>
+<div class="encourage">
+🤍 Ritmul tău este valid. Iubirea nu dispare.
+</div>
 <div class="button-row">
-<a href="#" class="back">← Înapoi</a>
+<a href="index.html#doliu" class="back">← Înapoi</a>
 <a href="https://t.me/+4KhVt7-V5aQzM2Rk" target="_blank" class="write">Scrie-ne</a>
 </div>
 </div>
@@ -263,9 +278,8 @@ Durerea care persistă nu înseamnă stagnare.
 </section>
 
 <footer>
-© 2026 Înțelegere — Un spațiu sigur pentru a fi auzit.
+© 2026 Suflet Mic
 </footer>
 
 </body>
 </html>
-
