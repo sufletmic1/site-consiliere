@@ -102,28 +102,27 @@ font-weight:500;
 .button-row{
 display:flex;
 justify-content:space-between;
-align-items:center;
-margin-top:30px;
+margin-top:25px;
 }
 
-.back-btn{
+.back{
 text-decoration:none;
 color:#2d6a4f;
 font-weight:500;
 }
 
-.write-btn{
+.write{
+text-decoration:none;
 background:#2d6a4f;
 color:white;
-padding:12px 28px;
+padding:10px 22px;
 border-radius:25px;
-text-decoration:none;
 font-weight:500;
 transition:0.3s;
 }
 
-.write-btn:hover{
-opacity:0.85;
+.write:hover{
+background:#1b4332;
 }
 
 footer{
@@ -144,7 +143,7 @@ font-size:14px;
 
 <p class="header-message">
 Indiferent dacă treci prin pierdere, violență, respingere, epuizare sau prin alte momente care apasă greu,
-vrem să știi că suntem aici pentru tine.  
+vrem să știi că suntem aici pentru tine.
 Te ascultăm fără judecată. Fără grabă. Cu respect și grijă reală.
 Dacă simți că ai nevoie să vorbești, să te descarci sau pur și simplu să fii auzit,
 ne poți scrie oricând, la orice oră.
@@ -156,128 +155,80 @@ ne poți scrie oricând, la orice oră.
 <section>
 
 <!-- SINUCIDERE -->
-
-<div class="block">
+<div class="block" id="sinucidere">
 <h2>Pierderea unei persoane prin sinucidere</h2>
 <p>Durerea aceasta este diferită...</p>
 <div class="encourage">
-🤍 Nu trebuie să porți singur întrebările fără răspuns. Faptul că încă simți atât de intens arată cât de profund ai iubit.
+🤍 Nu trebuie să porți singur întrebările fără răspuns.
 </div>
 <div class="button-row">
-<a href="index.html" class="back-btn">← Înapoi la Comunitate</a>
-<a href="https://t.me/+Q-zKSAyeoCZmNDhk" target="_blank" class="write-btn">Scrie-ne</a>
+<a href="index.html" class="back">← Înapoi</a>
+<a href="https://t.me/+Q-zKSAyeoCZmNDhk" target="_blank" class="write">Scrie-ne</a>
 </div>
 </div>
 
 <!-- VIOLENTA -->
-
-<div class="block">
+<div class="block" id="violenta">
 <h2>Violență în familie</h2>
 <p>Violența nu este doar o palmă...</p>
 <div class="encourage">
-🤍 Faptul că încă îți dorești liniște și siguranță arată că în tine există putere. Mai multă decât crezi.
+🤍 În tine există putere.
 </div>
 <div class="button-row">
-<a href="index.html" class="back-btn">← Înapoi la Comunitate</a>
-<a href="https://t.me/+gZZYNX_V0mViZjE0" target="_blank" class="write-btn">Scrie-ne</a>
+<a href="index.html" class="back">← Înapoi</a>
+<a href="https://t.me/+gZZYNX_V0mViZjE0" target="_blank" class="write">Scrie-ne</a>
 </div>
 </div>
 
 <!-- BULLYING -->
-
-<div class="block">
+<div class="block" id="bullying">
 <h2>Bullying și umilință</h2>
 <p>Când umilința se repetă...</p>
 <div class="encourage">
-🤍 Vocea celor care te-au rănit nu este adevărul despre tine.
+🤍 Valoarea ta nu scade.
 </div>
 <div class="button-row">
-<a href="index.html" class="back-btn">← Înapoi la Comunitate</a>
-<a href="https://t.me/+yjIz9Noovk0wZDFk" target="_blank" class="write-btn">Scrie-ne</a>
-</div>
-</div>
-
-<!-- ABUZ -->
-
-<div class="block">
-<h2>Abuz sexual</h2>
-<p>Abuzul sexual lasă răni invizibile...</p>
-<div class="encourage">
-🤍 Nu a fost vina ta. Meriți siguranță, respect și vindecare.
-</div>
-<div class="button-row">
-<a href="index.html" class="back-btn">← Înapoi la Comunitate</a>
-<a href="https://t.me/+1H_Z7Xeq7ARlY2Y0" target="_blank" class="write-btn">Scrie-ne</a>
-</div>
-</div>
-
-<!-- CERTURI FAMILIE -->
-
-<div class="block">
-<h2>Crescut într-o familie cu certuri sau lipsă de iubire</h2>
-<p>Tensiunea constantă poate face un copil...</p>
-<div class="encourage">
-🤍 Nu ai fost prea sensibil. Ai fost un copil care avea nevoie de mai multă iubire.
-</div>
-<div class="button-row">
-<a href="index.html" class="back-btn">← Înapoi la Comunitate</a>
-<a href="https://t.me/+D4lBOsxU42o4NTdk" target="_blank" class="write-btn">Scrie-ne</a>
-</div>
-</div>
-
-<!-- DIVORT -->
-
-<div class="block">
-<h2>Crescut cu separarea sau divorțul părinților</h2>
-<p>Separarea poate aduce teamă...</p>
-<div class="encourage">
-🤍 Nu a fost responsabilitatea ta să repari ce s-a rupt.
-</div>
-<div class="button-row">
-<a href="index.html" class="back-btn">← Înapoi la Comunitate</a>
-<a href="https://t.me/+SThSAPFSHJswYjk0" target="_blank" class="write-btn">Scrie-ne</a>
+<a href="index.html" class="back">← Înapoi</a>
+<a href="https://t.me/+yjIz9Noovk0wZDFk" target="_blank" class="write">Scrie-ne</a>
 </div>
 </div>
 
 <!-- RESPINGERE -->
-
-<div class="block">
+<div class="block" id="respingere">
 <h2>Respingere sau abandon</h2>
 <p>Respingerea doare...</p>
 <div class="encourage">
 🤍 Tu meriți iubire care rămâne.
 </div>
 <div class="button-row">
-<a href="index.html" class="back-btn">← Înapoi la Comunitate</a>
-<a href="https://t.me/+NQPixQgjx-tjNmQ0" target="_blank" class="write-btn">Scrie-ne</a>
+<a href="index.html" class="back">← Înapoi</a>
+<a href="https://t.me/+NQPixQgjx-tjNmQ0" target="_blank" class="write">Scrie-ne</a>
 </div>
 </div>
 
-<!-- DOLIU -->
-
-<div class="block">
-<h2>Pierderea unei persoane dragi</h2>
-<p>Există doruri care nu se estompează...</p>
-<div class="encourage">
-🤍 Ritmul tău de vindecare este valid.
-</div>
-<div class="button-row">
-<a href="index.html" class="back-btn">← Înapoi la Comunitate</a>
-<a href="https://t.me/+4KhVt7-V5aQzM2Rk" target="_blank" class="write-btn">Scrie-ne</a>
-</div>
-</div>
-
-<!-- NU ESTI SINGUR -->
-
-<div class="block">
+<!-- EPUIZARE -->
+<div class="block" id="epuizare">
 <h2>Perioade în care dorința de a merge mai departe este slăbită</h2>
-<p>Uneori nu mai e vorba de o durere anume...</p>
+<p>Uneori este doar epuizare...</p>
 <div class="encourage">
-🤍 Faptul că încă citești arată că în tine există o scânteie.
+🤍 O scânteie este suficientă.
 </div>
 <div class="button-row">
-<a href="index.html" class="back-btn">← Înapoi la Comunitate</a>
-<a href="https://t.me/+XHcA0ne26M9lMGVk" target="_blank" class="write-btn">Scrie-ne</a>
+<a href="index.html" class="back">← Înapoi</a>
+<a href="https://t.me/+XHcA0ne26M9lMGVk" target="_blank" class="write">Scrie-ne</a>
+</div>
+</div>
+
+<!-- ABUZ -->
+<div class="block" id="abuz">
+<h2>Abuz sexual</h2>
+<p>Abuzul sexual lasă răni invizibile...</p>
+<div class="encourage">
+🤍 Nu a fost vina ta.
+</div>
+<div class="button-row">
+<a href="index.html" class="back">← Înapoi</a>
+<a href="https://t.me/+1H_Z7Xeq7ARlY2Y0" target="_blank" class="write">Scrie-ne</a>
 </div>
 </div>
 
